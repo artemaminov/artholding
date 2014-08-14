@@ -58,7 +58,7 @@ header {
   div {
     height: 350px;
 //    width: 100%;
-    background: image-url(carousel-project.jpg) no-repeat center / cover;
+    background: image-url('carousel-project.jpg') no-repeat center / cover;
   }
 }
 
@@ -116,7 +116,7 @@ h1 {
   margin: 12px 0;
   color: #7A5217;
   &:before {
-    background: image-url(sprites.png) 0px -210px no-repeat;
+    background: image-url('sprites.png') 0px -210px no-repeat;
     display: block;
     width: 187px;
     height: 11px;
@@ -127,7 +127,7 @@ h1 {
     margin-left: -94px;
   }
   &:after {
-    background: image-url(sprites.png) 0px -184px no-repeat;
+    background: image-url('sprites.png') 0px -184px no-repeat;
     display: block;
     width: 207px;
     height: 11px;
@@ -140,10 +140,10 @@ h1 {
 }
 .order h1 {
   &:before {
-    background: image-url(sprites.png) 0px -223px no-repeat;
+    background: image-url('sprites.png') 0px -223px no-repeat;
   }
   &:after {
-    background: image-url(sprites.png) 0px -197px no-repeat;
+    background: image-url('sprites.png') 0px -197px no-repeat;
   }
 }
 
@@ -151,7 +151,7 @@ h1 {
 .dashed-line {
   &:after {
     content: "";
-    background: image-url(dashed-line.png) repeat-x;
+    background: image-url('dashed-line.png') repeat-x;
     height: 7px;
     width: 840px;
     display: inline-block;
@@ -160,10 +160,10 @@ h1 {
   }
 }
 .header-bg {
-  background: image-url(header-bg.jpg) repeat;
+  background: image-url('header-bg.jpg') repeat;
 }
 .header-divider {
-  background: image-url(header-divider.png) repeat-x;
+  background: image-url('header-divider.png') repeat-x;
   position: absolute;
   bottom: 80px;
   height: 2px;
