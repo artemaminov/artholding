@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artholding</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="header-bg">
+  <div class="artholding-logo"></div>
+  <div class="header-divider"></div>
+  <nav id="nav" class="content">
+    <ul>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Портфолио</a></li>
+      <li><a href="#">Заказать</a></li>
+      <li><a href="#">Клиенты</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="main-carousel">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <section class="section about">
+    <div class="content dashed-line">
+      <h1>О НАС</h1>
+      <article>
+        <p>Мы занимаемся дизайном уже более 7 лет и за это время мы набрали огромный опыт работы и повышали свою кваллификацию. Мы разрабатываем оригинальный графический дизайн компаний; рисуем авторские иллюстрации для веб-сайтов, разрабатываем дизайн мобильных приложений и мобильные версии сайтов, создаем интерактивные презентации и баннеры; флэш-анимацию для интернета, телевидения и торговых площадок; проектируем игры и интерфейсы. А кроме того, всегда обеспечиваем грамотную техническую реализацию своих проектов и высокий уровень их информационной защищенности.</p>
+        <p>Если Вы еще не уверены, почему стоит обратиться именно к нам , то просто посмотрите примеры наших работ и список наших клиентов. У них уже нет сомнений в вопросе выбора исполнителей. Наши клиенты возвращаются вновь и вновь, ведь они точно знают, что студия дизайна «ArtHolding» — это всегда высокое качество, уникальность, оперативность и комплексный подход к созданию любого коммерческого проекта.</p>
+      </article>
+    </div>
+  </section>
+  <section class="section portfolio">
+    <div class="content">
+      <h1>ПОРТФОЛИО</h1>
+      <div id="tabs" class="portfolio">
+        <ul>
+          <li><a href="#tabs-1">Все</a></li>
+          <li><a href="#tabs-2">Web-дизайн</a></li>
+          <li><a href="#tabs-3">Тех-дизайн</a></li>
+          <li><a href="#tabs-4">Иллюстрация</a></li>
+          <li><a href="#tabs-5">Баннеры</a></li>
+        </ul>
+        <div id="tabs-1" class="tab">
+          <ul class="tabs-pager">
+            <li class="projects-pager-left"></li>
+            <li class="projects-pager"></li>
+            <li class="projects-pager-right"></li>
+          </ul>
+          <div class="carousel">
+            <div class="page">
+              <div class="projects-row">
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+              </div>
+              <div class="projects-row-divider"></div>
+              <div class="projects-row">
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+              </div>
+              <div class="projects-row-divider"></div>
+            </div>
+            <div class="page">
+              <div class="projects-row">
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+              </div>
+              <div class="projects-row-divider"></div>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-2" class="tab">
+          <ul class="tabs-pager">
+            <li class="projects-pager-left"></li>
+            <li class="projects-pager"></li>
+            <li class="projects-pager-right"></li>
+          </ul>
+          <div class="carousel">
+            <div class="page">
+              <div class="projects-row">
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+                <div class="project">
+                  <img src="project.jpg" alt=""/>
+                  <h2>Название сайта</h2>
+                  <p>Web-дизайн</p>
+                  <a href="#">Смотреть</a>
+                  <div class="project-bottom-line"></div>
+                </div>
+                <div class="project-divider"></div>
+              </div>
+              <div class="projects-row-divider"></div>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-3" class="tab">
+          <div class="page">
+
+          </div>
+        </div>
+        <div id="tabs-4" class="tab">
+          <div class="page">
+
+          </div>
+        </div>
+        <div id="tabs-5" class="tab">
+          <div class="page">
+
+          </div>
+        </div>
+      </div>
+      <div class="projects">
+
+      </div>
+    </div>
+  </section>
+  <div class="section order header-bg">
+    <div class="content">
+      <h1>ЗАКАЗАТЬ</h1>
+
+    </div>
+  </div>
+  <section class="section clients">
+    <div class="content dashed-line">
+      <h1>КЛИЕНТЫ</h1>
+    </div>
+  </section>
+  <section class="section contacts">
+    <div class="content">
+      <h1>КОНТАКТЫ</h1>
+    </div>
+  </section>
+  <%= yield %>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

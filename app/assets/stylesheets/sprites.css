@@ -1,0 +1,134 @@
+.article-down-arrow-white {
+  background: url(sprites.png) 0px -197px no-repeat;
+  display: inline-block;
+  width: 207px;
+  height: 11px;
+}
+
+.article-up-arrow-white {
+  background: url(sprites.png) 0px -223px no-repeat;
+  display: inline-block;
+  width: 187px;
+  height: 11px;
+}
+
+.artholding-logo {
+	background: url(sprites.png) 0px 0px no-repeat;
+	display: inline-block;
+	width: 233px;
+	height: 182px;
+}
+
+.carousel-pager {
+	background: url(sprites.png) -189px -197px no-repeat;
+	display: inline-block;
+	width: 103px;
+	height: 5px;
+}
+
+.icn-box {
+	background: url(sprites.png) -235px -70px no-repeat;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+.icn-close {
+	background: url(sprites.png) -245px -110px no-repeat;
+	display: inline-block;
+	width: 8px;
+	height: 10px;
+}
+
+.icn-mail {
+	background: url(sprites.png) -264px -96px no-repeat;
+	display: inline-block;
+	width: 14px;
+	height: 8px;
+}
+
+.icn-phone {
+	background: url(sprites.png) -235px -96px no-repeat;
+	display: inline-block;
+	width: 13px;
+	height: 12px;
+}
+
+.icn-skype {
+	background: url(sprites.png) -250px -96px no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+}
+
+.project-bottom-line {
+	background: url(sprites.png) 0px -257px no-repeat;
+	display: inline-block;
+	width: 266px;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.project-goahead-arrow {
+	background: url(sprites.png) -235px -110px no-repeat;
+	display: inline-block;
+	width: 8px;
+	height: 12px;
+}
+
+.projects-pager-left, .projects-pager-right {
+	cursor: pointer;
+}
+.projects-pager {
+	background: url(sprites.png) -29px -236px no-repeat;
+	display: inline-block;
+	width: 18px;
+	height: 19px;
+}
+.projects-pager-left {
+	background: url(sprites.png) -18px -236px no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 19px;
+}
+.projects-pager-right {
+	background: url(sprites.png) -46px -236px no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 19px;
+}
+.projects-pager-left:hover {
+	background: url(sprites.png) 0px -236px no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 19px;
+}
+.projects-pager-right:hover {
+	background: url(sprites.png) -64px -236px no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 19px;
+}
+
+.selectbox-arrow {
+	background: url(sprites.png) -261px -70px no-repeat;
+	display: inline-block;
+	width: 32px;
+	height: 16px;
+}
+
+.selectbox-down-arrow {
+	background: url(sprites.png) -280px -96px no-repeat;
+	display: inline-block;
+	width: 10px;
+	height: 8px;
+}
+
+.thumb-up {
+	background: url(sprites.png) -235px 0px no-repeat;
+	display: inline-block;
+	width: 61px;
+	height: 68px;
+}}
