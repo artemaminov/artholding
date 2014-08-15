@@ -19,6 +19,7 @@
 /.idea/
 /log/
 /public/system
+/public/assets
 /config/s3.yml
 
 .DS_Store
