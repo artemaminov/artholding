@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/tabs
+//= require jquery-ui/selectmenu
 //= require turbolinks
 //= require_tree .

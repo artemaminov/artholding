@@ -54,10 +54,10 @@ header {
 }
 
 .main-carousel {
-//  position: relative;
   div {
+    display: block;
+    float: left;
     height: 350px;
-//    width: 100%;
     background: image-url('carousel-project.jpg') no-repeat center / cover;
   }
 }
@@ -144,6 +144,61 @@ h1 {
   }
   &:after {
     background: image-url('sprites.png') 0px -197px no-repeat;
+  }
+}
+
+.clients-carousel {
+  width: 840px;
+  .client {
+    display: block;
+    float: left;
+    img {
+      height: 175px;
+      width: 266px;
+    }
+  }
+}
+
+// Form
+.form {
+  .right-form {
+    float: right;
+    textarea {
+      overflow: auto;
+      vertical-align: top;
+      width: 466px;
+      height: 135px;
+      padding: 10px;
+      outline: none;
+    }
+  }
+  .left-form {
+    float: left;
+    input {
+      display: block;
+      height: 30px;
+      margin-bottom: 13px;
+      width: 322px;
+      padding: 5px;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+      &:invalid {
+        outline: none;
+      }
+    }
+  }
+  .control {
+    clear: both;
+    text-align: center;
+    padding: 48px 0 30px 0;
+    input {
+      background: white;
+      height: 48px;
+      width: 348px;
+      border: none;
+    }
   }
 }
 
