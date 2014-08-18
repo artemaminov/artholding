@@ -22,21 +22,41 @@ p {
   font: 11pt 'PT Sans';
 }
 
+.table {
+  display: table;
+  .row {
+    display: table-row;
+    .cell {
+      display: table-cell;
+    }
+    .cell-divider {
+      display: table-cell;
+      min-width: 18px;
+      width: 50%;
+    }
+  }
+  .row-divider {
+    display: table-row;
+    height: 50px;
+  }
+}
+
+footer {
+  height: 40px;
+}
+
 // UI
 header {
   height: 326px;
   position: relative;
   #nav {
-    display: table;
     bottom: 34px;
     position: absolute;
     ul {
-      display: table-row;
       li {
         font: 19pt 'ISOCTEUR';
         text-transform: uppercase;
         text-align: center;
-        display: table-cell;
         &:after {
           display: table-cell;
           content: "";
@@ -155,6 +175,30 @@ h1 {
     img {
       height: 175px;
       width: 266px;
+    }
+  }
+}
+
+.contacts {
+  .table {
+    padding-top: 20px;
+  }
+  .contact {
+    span:first-child {
+      font: 10pt 'PT Sans';
+      text-transform: uppercase;
+      position: relative;
+      padding-left: 30px;
+      i {
+        position: absolute;
+        top: -4px;
+        left: 0;
+      }
+    }
+    span.info {
+      font: 18pt 'Century Gothic';
+      display: block;
+      padding-left: 30px;
     }
   }
 }

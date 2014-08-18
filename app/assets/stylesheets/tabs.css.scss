@@ -2,7 +2,6 @@
   position: relative;
   .ui-tabs-nav {
     height: 60px;
-    float: left;
     li {
       font: 14pt 'Century Gothic';
       text-transform: uppercase;
@@ -18,27 +17,12 @@
     }
   }
   .tabs-pager {
-    float: right;
-    position: relative;
+    position: absolute;
+    right: 0;
     top: 4px;
   }
   .page {
     float: left;
-    display: table;
     width: 840px;
-    .projects-row {
-      display: table-row;
-      .project, .project-divider {
-        display: table-cell;
-        min-width: 18px;
-      }
-      .project-divider:last-child {
-        width: 100%;
-      }
-    }
-    .projects-row-divider {
-      display: table-row;
-      height: 50px;
-    }
   }
 }
