@@ -25,19 +25,23 @@ $ ->
     swipe: true
 
   $('.clients-carousel').carouFredSel
-    circular: true,
-    infinite: true,
+    circular: false,
+    infinite: false,
     responsive: true,
     height: 'auto',
-    width: 840,
+#    width: 840,
     items:
-      visible: 4,
-      width: 266,
+      visible: 3,
+      width: 280,
       height: 175,
-      minimum: 1
+      minimum: 3
     scroll:
       items: 1
-    auto: true,
+    auto: false,
+    prev:
+      button: -> $('.clients-pager .projects-pager-left')
+    next:
+      button: -> $('.clients-pager .projects-pager-right')
     swipe: true
 
   $.each $('.tab'), () ->
