@@ -59,3 +59,16 @@ $ ->
         next:
           button: -> tab.find('.projects-pager-right')
         swipe: true
+
+  $(window).scroll ->
+    window_top = $(window).scrollTop()
+    div_top = $('.artholding-logo').offset().top + 212
+    console.log("div_top", div_top, "window_top", window_top)
+    if (window_top > div_top)
+      $('.navigation').addClass('stick header-bg')
+    else
+      $('.navigation').removeClass('stick header-bg')
+
+  $("#nav a").click (evn) ->
+    evn.preventDefault()
+    $('html,body').scrollTo(this.hash, 500, {offset: -90})

@@ -57,6 +57,16 @@ header {
         font: 19pt 'ISOCTEUR';
         text-transform: uppercase;
         text-align: center;
+        &:hover:before {
+          content: "";
+          width: 42px;
+          height: 1px;
+          display: block;
+          background-color: #7A5217;
+          position: relative;
+          top: 27px;
+          left: 20px;
+        }
         &:after {
           display: table-cell;
           content: "";
@@ -69,6 +79,20 @@ header {
           }
         }
       }
+    }
+  }
+  .navigation {
+    display: block;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    &.stick {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+      right: 0;
     }
   }
 }
