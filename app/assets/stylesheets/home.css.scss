@@ -255,6 +255,30 @@ h1 {
       background: image-url('sprites.png') 0px -197px no-repeat;
     }
   }
+  .order-complete {
+    text-align: center;
+    .thumb-up {
+      margin-top: 20px;
+    }
+    .thank-you, .wait {
+      font-family: 'Century Gothic';
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    .thank-you {
+      color: #7A5217;
+      font-size: 19pt;
+      padding: 15px 0;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      margin-top: 26px;
+    }
+    .wait {
+      font-size: 14pt;
+      color: white;
+      margin: 28px 0 58px 0;
+    }
+  }
 }
 
 .clients {
