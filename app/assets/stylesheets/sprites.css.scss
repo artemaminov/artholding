@@ -34,10 +34,10 @@
 }
 
 .icn-close {
-	background: image-url('sprites.png') -245px -110px no-repeat;
-	display: inline-block;
-	width: 8px;
-	height: 24px;
+  background: image-url('sprites.png') -247px -110px no-repeat;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
 }
 
 .icn-mail {
@@ -59,6 +59,13 @@
 	display: inline-block;
 	width: 24px;
 	height: 24px;
+}
+
+.icn-zoom {
+  background: image-url('sprites.png') -269px -109px no-repeat;
+  display: inline-block;
+  width: 24px;
+  height: 21px;
 }
 
 .project-bottom-line {
