@@ -16,6 +16,5 @@
  *= require jquery.fancybox-buttons
  *= require jquery.fancybox-thumbs
  *= require_self
- *= require_directory ./fonts
  *= require home
  */
