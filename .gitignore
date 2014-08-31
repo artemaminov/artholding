@@ -24,3 +24,5 @@
 
 .DS_Store
 /latest.dump
+
+/config/initializers/dev_environment.rb

@@ -1,0 +1,18 @@
+$(".project-modal").attr("id", <%= @project.id %>).html("<%= j render 'shared/project_modal' %>");
+
+if ($(".project-modal:hidden").length != 0) {
+  var prev_tabs_div_height = $("#tabs").height();
+}
+$("#tabs").height("870px");
+
+$(".project-modal .icn-close").click(function(evn){
+  evn.preventDefault();
+  $(".project-modal").hide();
+  $(this).unbind("click");
+  $("#tabs").height("auto");
+});
+
+$(".project-modal .fancybox").fancybox({
+  fitToView: false,
+  maxWidth: "100%"
+});

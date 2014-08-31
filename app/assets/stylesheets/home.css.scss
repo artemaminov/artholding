@@ -19,7 +19,7 @@ a {
 }
 
 p, input, textarea, .ui-selectmenu-button, .ui-menu-item {
-  font: 11pt 'PT Sans';
+  font: 11pt 'ptsans';
 }
 input, textarea, .ui-selectmenu-button, .ui-menu-item {
   font-style: italic;
@@ -67,7 +67,7 @@ header {
     position: absolute;
     ul {
       li {
-        font: 19pt 'ISOCTEUR';
+        font: 19pt 'isocteur';
         text-transform: uppercase;
         text-align: center;
         &:hover:before {
@@ -104,20 +104,42 @@ header {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 10000;
+      z-index: 100;
       right: 0;
     }
   }
 }
 
-.main-carousel {
-  div {
-    display: block;
-    float: left;
-    height: 350px;
-    background: image-url('carousel-project.jpg') no-repeat center / cover;
+.main-carousel-wrapper {
+  position: relative;
+  .main-carousel {
+    div {
+      display: block;
+      float: left;
+      height: 350px;
+      background: image-url('carousel-project.jpg') no-repeat center / cover;
+    }
+  }
+  .main-carousel-pager {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    a {
+      display: inline-block;
+      width: 46px;
+      height: 3px;
+      border: 1px solid black;
+      margin: 0 5px;
+      &.selected {
+        border: 1px solid transparent;
+        background-color: black;
+      }
+    }
   }
 }
+
 
 #tabs {
   .project {
@@ -148,7 +170,7 @@ header {
       top: 77px;
     }
     h2, a {
-      font: 12pt 'Century Gothic';
+      font: 12pt 'cgothic';
       text-transform: uppercase;
     }
     h2, p, a {
@@ -195,7 +217,7 @@ header {
 }
 
 h1 {
-  font: 30pt 'Bookman Old Style';
+  font: 30pt 'bookos';
   text-align: center;
   position: relative;
   padding: 34px 0;
@@ -227,7 +249,7 @@ h1 {
 
 .order {
   input[type=submit] {
-    font: 19pt 'Century Gothic';
+    font: 19pt 'cgothic';
     text-transform: uppercase;
     &:hover {
       background-color: #7A5217;
@@ -256,12 +278,13 @@ h1 {
     }
   }
   .order-complete {
+    display: none;
     text-align: center;
     .thumb-up {
       margin-top: 20px;
     }
     .thank-you, .wait {
-      font-family: 'Century Gothic';
+      font-family: 'cgothic';
       text-transform: uppercase;
       display: inline-block;
     }
@@ -277,6 +300,7 @@ h1 {
       font-size: 14pt;
       color: white;
       margin: 28px 0 58px 0;
+      line-height: 24px;
     }
   }
 }
@@ -288,7 +312,7 @@ h1 {
     right: 0;
   }
   span {
-    font: 14pt 'Century Gothic';
+    font: 14pt 'cgothic';
     text-transform: uppercase;
     margin-bottom: 20px;
     display: block;
@@ -299,8 +323,8 @@ h1 {
       display: block;
       float: left;
       img {
-        height: 175px;
-        width: 266px;
+//        height: 175px;
+//        width: 266px;
       }
     }
   }
@@ -315,7 +339,7 @@ h1 {
   }
   .contact {
     span:first-child {
-      font: 10pt 'PT Sans';
+      font: 10pt 'ptsans';
       text-transform: uppercase;
       position: relative;
       padding-left: 30px;
@@ -326,7 +350,7 @@ h1 {
       }
     }
     span.info {
-      font: 18pt 'Century Gothic';
+      font: 18pt 'cgothic';
       display: block;
       padding-left: 30px;
     }
@@ -366,7 +390,7 @@ h1 {
   .control {
     clear: both;
     text-align: center;
-    padding: 48px 0 30px 0;
+    padding: 48px 0 55px 0;
     input {
       background: white;
       height: 48px;

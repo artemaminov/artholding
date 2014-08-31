@@ -3,7 +3,7 @@
   .ui-tabs-nav {
     height: 60px;
     li {
-      font: 14pt 'Century Gothic';
+      font: 14pt 'cgothic';
       text-transform: uppercase;
       float: left;
       margin: 0 30px 0 0;
@@ -29,6 +29,7 @@
     position: absolute;
     right: 0;
     top: 4px;
+    cursor: default;
   }
   .page {
     float: left;

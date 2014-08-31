@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Century Gothic';
-  src: url('GOTHIC.eot'); /* IE9 Compat Modes */
-  src: url('GOTHIC.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('GOTHIC.woff') format('woff'), /* Modern Browsers */
-       url('GOTHIC.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('GOTHIC.svg#13db03934b676bad49f0835d401d12db') format('svg'); /* Legacy iOS */
+  font-family: 'cgothic';
+  src: url('cgothic.eot'); /* IE9 Compat Modes */
+  src: url('cgothic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('cgothic.woff') format('woff'), /* Modern Browsers */
+       url('cgothic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('cgothic.svg#13db03934b676bad49f0835d401d12db') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;

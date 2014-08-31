@@ -38,6 +38,7 @@
   display: inline-block;
   width: 19px;
   height: 19px;
+  cursor: pointer;
 }
 
 .icn-mail {
@@ -80,6 +81,9 @@
 
 .projects-pager-left, .projects-pager-right {
 	cursor: pointer;
+    &.disabled, &.disabled a {
+      cursor: default;
+    }
 }
 .projects-pager {
 	background: image-url('sprites.png') -29px -236px no-repeat;
@@ -104,12 +108,18 @@
 	display: inline-block;
 	width: 12px;
 	height: 19px;
+    &.disabled {
+      background: image-url('sprites.png') -18px -236px no-repeat;
+    }
 }
 .projects-pager-right:hover {
 	background: image-url('sprites.png') -64px -236px no-repeat;
 	display: inline-block;
 	width: 12px;
 	height: 19px;
+    &.disabled {
+      background: image-url('sprites.png') -46px -236px no-repeat;
+    }
 }
 
 .selectbox-arrow {

@@ -7,10 +7,19 @@ $ ->
     show: false
     activate: -> $('.carousel').trigger('updateSizes')
 
+  $("a[data-remote]")
+    .on 'ajax:success', (e, data, status, xhr) ->
+      $('.project-modal').show()
+
+  $(".order .form form")
+    .on 'ajax:success', (e, data, status, xhr) ->
+      $('.order .form').hide()
+      $('.order .order-complete').show()
+
   $('.left-form select').selectmenu
     width: 336
 
-  $('.main-carousel').carouFredSel
+  $(".main-carousel").carouFredSel
     circular: true,
     infinite: true,
     responsive: true,
@@ -21,14 +30,18 @@ $ ->
       visible: 1,
       height: 350,
       minimum: 1
+    pagination:
+      container: ".main-carousel-pager"
+      anchorBuilder: (nr) ->
+        '<a href="#'+nr+'"></a>'
     auto: true,
     swipe: true
 
-  $('.clients-carousel').carouFredSel
+  $(".clients-carousel").carouFredSel
     circular: false,
     infinite: false,
     responsive: true,
-    height: 'auto',
+    height: 150,
 #    width: 840,
     items:
       visible: 3,
@@ -67,7 +80,6 @@ $ ->
   $(window).scroll ->
     window_top = $(window).scrollTop()
     div_top = $('.artholding-logo').offset().top + 212
-    console.log("div_top", div_top, "window_top", window_top)
     if (window_top > div_top)
       $('.navigation').addClass('stick header-bg')
     else
@@ -76,3 +88,4 @@ $ ->
   $("#nav a").click (evn) ->
     evn.preventDefault()
     $('html,body').scrollTo(this.hash, 500, {offset: -90})
+

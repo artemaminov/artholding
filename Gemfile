@@ -42,3 +42,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'paperclip'
+gem 'active_admin_jcrop'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'russian'

@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Bookman Old Style';
-  src: url('BOOKOS.eot'); /* IE9 Compat Modes */
-  src: url('BOOKOS.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('BOOKOS.woff') format('woff'), /* Modern Browsers */
-       url('BOOKOS.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('BOOKOS.svg#be6b883923deaeb71bafe75c217edcd0') format('svg'); /* Legacy iOS */
+  font-family: 'bookos';
+  src: url('bookos.eot'); /* IE9 Compat Modes */
+  src: url('bookos.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('bookos.woff') format('woff'), /* Modern Browsers */
+       url('bookos.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('bookos.svg#be6b883923deaeb71bafe75c217edcd0') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;

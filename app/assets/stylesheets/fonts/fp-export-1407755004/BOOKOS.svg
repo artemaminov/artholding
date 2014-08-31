@@ -1,15 +1,10 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>
-Created by FontPrep 20130207 at Mon Aug 11 17:03:27 2014
- By Artem Aminov
-Digitized data copyright The Monotype Corporation 1991-1995. All rights reserved. Bookman Old StyleTM is a trademark of The Monotype Corporation which may be registered in certain jurisdictions.
-</metadata>
 <defs>
 <font id="be6b883923deaeb71bafe75c217edcd0" horiz-adv-x='1024' >
   <font-face 
-    font-family="BookmanOldStyle"
+    font-family="bookos"
     font-weight="300"
     font-stretch="normal"
     units-per-em="2048"

@@ -1,0 +1,34 @@
+ru:
+  "true": Да
+  "false": Нет
+  activerecord:
+    attributes:
+      admin_user:
+        current_sign_in_at: Текущая авторизация
+        current_sign_in_ip: Текущий IP авторизации
+        last_sign_in_ip: IP предыдущей авторизации
+        created_at: Создан
+        updated_at: Изменен
+        email: E-mail
+        encrypted_password: Зашифрованый пароль
+        last_sign_in_at: Последняя авторизация
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить
+        reset_password_token: Токен сброса пароля
+        reset_password_sent_at: Сброс пароля
+        remember_created_at: Cookies созданы
+        sign_in_count: Количество авторизаций
+      carousel:
+        header: Заголовок
+        body: Текст
+        banner: Изображение
+        created_at: Создан
+        updated_at: Изменен
+    models:
+      admin_user: Пользователи
+      carousel:
+        one: Рекламу
+        other: Реклама
+  formtastic:
+    create: Создать %{model}

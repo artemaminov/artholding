@@ -1,0 +1,34 @@
+<div class="date">
+  <span class="month"><%= @project.finished_at.to_formatted_s :month %></span>
+  <span class="day"><%= @project.finished_at.day %></span>
+  <span class="year"><%= @project.finished_at.year %></span>
+</div>
+<div class="info">
+  <div class="image">
+    <a class="fancybox" href="<%= @project.image.url :original %>"><img src="<%= @project.image.url :medium %>" alt=""/></a>
+
+    <div class="bar">
+      <span class="zoom">увеличить<i class="icn-zoom"></i></span>
+    </div>
+  </div>
+  <h2><%= @project.title %></h2>
+
+  <h3>Детали проекта</h3>
+
+  <p><%= @project.about %></p>
+
+  <div class="inside-project-control">
+    <% if @project.client.present? %>
+    <span class="client">Клиент: <a href="#"><%= @project.client.name %></a></span>
+    <span class="site">Посетить сайт: <a href="#"><%= @project.client.site %></a></span>
+    <% end %>
+    <a class="icn-close"></a>
+    <ul class="inside-project-pager">
+      <li class="projects-pager-left <%= 'disabled' if @project.prev(@group).nil? %>">
+        <%= link_to "", {id: @project.prev(@group), group: @group}, remote: true %></li>
+      <li class="projects-pager"></li>
+      <li class="projects-pager-right <%= 'disabled' if @project.next(@group).nil? %>">
+        <%= link_to "", {id: @project.next(@group), group: @group}, remote: true %></li>
+    </ul>
+  </div>
+</div>

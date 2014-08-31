@@ -1,0 +1,131 @@
+<div class="main-carousel-wrapper">
+  <div class="main-carousel">
+    <% Project.carouselled.each_with_index do |project| %>
+    <div style="background-image: url(<%= project.image.url :original %>)"></div>
+    <% end %>
+  </div>
+  <div class="main-carousel-pager"></div>
+</div>
+
+
+<section class="section about" id="about">
+  <div class="content dashed-line">
+    <h1>О НАС</h1>
+    <article>
+      <p>Мы занимаемся дизайном уже более 7 лет и за это время мы набрали огромный опыт работы и повышали свою кваллификацию. Мы разрабатываем оригинальный графический дизайн компаний; рисуем авторские иллюстрации для веб-сайтов, разрабатываем дизайн мобильных приложений и мобильные версии сайтов, создаем интерактивные презентации и баннеры; флэш-анимацию для интернета, телевидения и торговых площадок; проектируем игры и интерфейсы. А кроме того, всегда обеспечиваем грамотную техническую реализацию своих проектов и высокий уровень их информационной защищенности.</p>
+      <p>Если Вы еще не уверены, почему стоит обратиться именно к нам , то просто посмотрите примеры наших работ и список наших клиентов. У них уже нет сомнений в вопросе выбора исполнителей. Наши клиенты возвращаются вновь и вновь, ведь они точно знают, что студия дизайна «ArtHolding» — это всегда высокое качество, уникальность, оперативность и комплексный подход к созданию любого коммерческого проекта.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section portfolio" id="portfolio">
+  <div class="content">
+    <h1>ПОРТФОЛИО</h1>
+    <div id="tabs" class="portfolio">
+      <ul>
+        <li><a href="#tabs-1">Все</a></li>
+        <% @groups.each_with_index do |group, i| %>
+          <li><a href="#tabs-<%= i + 2 %>"><%= group.name %></a></li>
+        <% end %>
+      </ul>
+      <div id="tabs-1" class="tab">
+        <ul class="tabs-pager">
+          <li class="projects-pager-left"></li>
+          <li class="projects-pager"></li>
+          <li class="projects-pager-right"></li>
+        </ul>
+        <div class="carousel">
+          <%= render 'shared/projects_table', projects: @projects, group: false %>
+        </div>
+      </div>
+
+      <% @groups.each_with_index do |group, i| %>
+        <div id="tabs-<%= i + 2 %>" class="tab">
+          <ul class="tabs-pager">
+            <li class="projects-pager-left"></li>
+            <li class="projects-pager"></li>
+            <li class="projects-pager-right"></li>
+          </ul>
+          <div class="carousel">
+            <%= render 'shared/projects_table', projects: Project.of_group(group.id), group: true %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="project-modal"></div>
+
+  </div>
+</section>
+
+<div class="section order header-bg" id="order">
+  <div class="content">
+    <h1>ЗАКАЗАТЬ</h1>
+    <div class="form">
+      <%= form_tag order_path, method: :post, remote: true do %>
+        <div class="left-form">
+          <%= text_field_tag 'order[name]', nil, placeholder: "Имя", type: "text" %>
+          <%= email_field_tag 'order[email]', nil, placeholder: "E-mail", type: "text" %>
+          <%= select_tag 'order[group]', options_from_collection_for_select(@groups, "id", "name") %>
+        </div>
+        <div class="right-form">
+          <%= text_area_tag 'order[text]', nil, cols: 30, rows: 10 %>
+        </div>
+        <div class="control">
+          <%= submit_tag "Сделать заказ", disable_with: "Отправка сообщения..." %>
+        </div>
+        <% end %>
+    </div>
+    <div class="order-complete">
+      <i class="thumb-up"></i>
+      <br/>
+      <span class="thank-you">Спасибо за обращение</span>
+      <br/>
+      <span class="wait">В ближайшее время мы<br/>свяжемся с Вами!</span>
+    </div>
+  </div>
+</div>
+<section class="section clients" id="clients">
+  <div class="content dashed-line">
+    <h1>КЛИЕНТЫ</h1>
+    <div class="carousel-box">
+      <span>Список клиентов</span>
+      <ul class="clients-pager">
+        <li class="projects-pager-left" style="display: inline-block;"></li>
+        <li class="projects-pager"></li>
+        <li class="projects-pager-right" style="display: inline-block;"></li>
+      </ul>
+      <div class="clients-carousel">
+        <% @clients.each do |client| %>
+        <div class="client">
+          <img src="<%= client.logo.url :client_logo %>" alt=""/>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="section contacts" id="contacts">
+  <div class="content">
+    <h1>КОНТАКТЫ</h1>
+    <div class="table">
+      <div class="row">
+        <div class="contact cell">
+          <span><i class="icn-phone"></i>Телефон</span>
+          <span class="info">8&nbsp;960&nbsp;460&nbsp;7&nbsp;666</span>
+        </div>
+        <div class="cell-divider"></div>
+        <div class="contact cell">
+          <span><i class="icn-skype"></i>Скайп</span>
+          <span class="info">dizainer_stepa</span>
+        </div>
+        <div class="cell-divider"></div>
+        <div class="contact cell">
+          <span><i class="icn-mail"></i>Email</span>
+          <span class="info">bms.89@mail.ru</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

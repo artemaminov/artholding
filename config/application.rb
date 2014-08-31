@@ -19,5 +19,21 @@ module Artholding
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ru
+
+    #Mailer
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        address: "smtp.gmail.com",
+        port: 587,
+        # domain: "artholding.ru",
+        authentication: "plain",
+        enable_starttls_auto: true,
+        user_name: ENV["GMAIL_USERNAME"],
+        password: ENV["GMAIL_PASSWORD"]
+    }
+    # config.action_mailer.default_url_options = {host: "www.artholding.ru"}
+    # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    # config.action_mailer.raise_delivery_errors = true
+    # config.action_mailer.perform_deliveries = true
   end
 end

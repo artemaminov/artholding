@@ -1,0 +1,31 @@
+<% projects.each_with_index do |project, i| %>
+  <% if i % 6 == 0 %>
+    <% @projects_at_page = 1 %>
+    <div class="page table">
+  <% end %>
+  <% if i % 3 == 0 %>
+    <% @projects_in_row = 1 %>
+    <div class="row">
+  <% end %>
+  <div class="project">
+    <img src="<%= project.image.url :small %>" alt=""/>
+    <h2><%= project.title %></h2>
+    <p><%= project.group.name %></p>
+    <%= link_to "Смотреть", project_path(project, group: group), remote: true %>
+    <div class="project-bottom-line"></div>
+  </div>
+  <% if @projects_in_row == 3 || i == projects.count - 1 %>
+    <% if i < 3 %>
+      <div class="cell-divider"></div>
+    <% end %>
+    </div>
+    <div class="row-divider"></div>
+  <% else %>
+    <div class="cell-divider"></div>
+  <% end %>
+  <% if @projects_at_page == 6 || i == projects.count - 1 %>
+    </div>
+  <% end %>
+  <% @projects_in_row = @projects_in_row + 1 %>
+  <% @projects_at_page = @projects_at_page + 1 %>
+<% end %>
