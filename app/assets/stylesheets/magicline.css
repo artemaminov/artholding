@@ -1,14 +1,23 @@
-.navigation {
+.navigation, .portfolio {
 	overflow: hidden;
 }
 
-.menu-cursor {
+.menu-cursor1 {
 	width: 42px;
 	height: 1px;
 	display: block;
 	background-color: #7A5217;
 	left: -50px;
 	top: 50px;
+}
+
+.menu-cursor2 {
+	width: 30px;
+	height: 1px;
+	display: block;
+	background-color: #7A5217;
+	left: -50px;
+	top: -34px;
 }
 
 .transition {

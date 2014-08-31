@@ -6,16 +6,16 @@
       font: 14pt 'cgothic';
       text-transform: uppercase;
       float: left;
-      margin: 0 30px 0 0;
-      &:hover:before {
-        content: "";
-        display: block;
-        height: 1px;
-        width: 30px;
-        background-color: #7A5217;
-        position: absolute;
-        top: 26px;
-      }
+      padding: 0 30px 0 0;
+//      &:hover:before {
+//        content: "";
+//        display: block;
+//        height: 1px;
+//        width: 30px;
+//        background-color: #7A5217;
+//        position: absolute;
+//        top: 26px;
+//      }
       a {
         text-decoration: none;
         color: black;
