@@ -70,16 +70,16 @@ header {
         font: 19pt 'isocteur';
         text-transform: uppercase;
         text-align: center;
-        &:hover:before {
-          content: "";
-          width: 42px;
-          height: 1px;
-          display: block;
-          background-color: #7A5217;
-          position: relative;
-          top: 27px;
-          left: 20px;
-        }
+//        &:hover:before {
+//          content: "";
+//          width: 42px;
+//          height: 1px;
+//          display: block;
+//          background-color: #7A5217;
+//          position: relative;
+//          top: 27px;
+//          left: 20px;
+//        }
         &:after {
           display: table-cell;
           content: "";

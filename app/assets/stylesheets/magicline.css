@@ -1,0 +1,16 @@
+.navigation {
+	overflow: hidden;
+}
+
+.menu-cursor {
+	width: 42px;
+	height: 1px;
+	display: block;
+	background-color: #7A5217;
+	left: -50px;
+	top: 50px;
+}
+
+.transition {
+	transition: left .2s ease-in-out 0s;
+}
