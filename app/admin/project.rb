@@ -1,6 +1,5 @@
 ActiveAdmin.register Project do
 
-
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -14,7 +13,7 @@ ActiveAdmin.register Project do
   #  permitted
   # end
 
-  permit_params :title, :about, :finished_at, :image, group_attributes: [:id, :name], client_attributes: [:id, :name]
+  permit_params :title, :about, :finished_at, :image, :group_id, :client_id, :is_in_carousel
 
   jcropable
 
@@ -30,6 +29,7 @@ ActiveAdmin.register Project do
     column :image do |image|
       image_tag image.image.url :small, width: "266px"
     end
+    actions
   end
 
   form do |f|
@@ -40,6 +40,7 @@ ActiveAdmin.register Project do
       f.input :image, as: :jcropable, jcrop_options: { aspectRatio: 1.52, minSize: [702, 416] }
       f.input :finished_at
       f.input :client
+      f.input :is_in_carousel
     end
     f.actions
   end

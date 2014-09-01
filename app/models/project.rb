@@ -2,12 +2,12 @@ class Project < ActiveRecord::Base
 
   belongs_to :client
   belongs_to :group
-  has_attached_file :image, :styles => { small: "266x175#", medium: "702x416#" }
+  has_attached_file :image, :styles => { small: "266x175#", medium: "702x416#", carousel: "1600x350#" }
 
-  validates :title, :about, :finished_at, :group, :image, presence: true
+  validates :title, :about, :finished_at, :group_id, :image, presence: true
   validates_attachment :image, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
-  accepts_nested_attributes_for :group, :client
+  # accepts_nested_attributes_for :group, :client
 
   def self.carouselled
     where is_in_carousel: true

@@ -30,6 +30,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,6 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'active_admin_jcrop'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'

@@ -1,7 +1,7 @@
 <div class="main-carousel-wrapper">
   <div class="main-carousel">
     <% Project.carouselled.each_with_index do |project| %>
-    <div style="background-image: url(<%= project.image.url :original %>)"></div>
+    <div style="background-image: url(<%= project.image.url :carousel %>)"></div>
     <% end %>
   </div>
   <div class="main-carousel-pager"></div>

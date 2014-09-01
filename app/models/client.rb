@@ -7,6 +7,4 @@ class Client < ActiveRecord::Base
   validates_attachment :logo, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
 
-
-
 end

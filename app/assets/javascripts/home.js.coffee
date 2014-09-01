@@ -29,7 +29,7 @@ $ ->
     items:
       visible: 1,
       height: 350,
-      minimum: 1
+      minimum: 2
     pagination:
       container: ".main-carousel-pager"
       anchorBuilder: (nr) ->
