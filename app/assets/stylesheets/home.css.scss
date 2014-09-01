@@ -6,8 +6,9 @@
 .content {
   width: 840px;
   position: relative;
-  left: 50%;
-  margin-left: -420px;
+//  left: 50%;
+//  margin-left: -420px;
+  margin: 0 auto;
 }
 
 .header-divider {
@@ -63,8 +64,9 @@ header {
   height: 326px;
   position: relative;
   #nav {
-    bottom: 34px;
-    position: absolute;
+    top: 24px;
+//    bottom: 34px;
+//    position: absolute;
     ul {
       li {
         font: 19pt 'isocteur';
@@ -251,20 +253,21 @@ h1 {
   input[type=submit] {
     font: 19pt 'cgothic';
     text-transform: uppercase;
-    &:hover {
+//    &:hover {
       background-color: #7A5217;
       color: white;
-    }
+//    }
   }
-  .control:hover:after {
-    background-color: #3E2B0B;
-  }
+//  .control:hover:after {
+//    background-color: #3E2B0B;
+//  }
   .control:after {
     content: "";
     display: block;
     height: 4px;
     width: 348px;
-    background-color: #3D3D3D;
+    background-color: #3E2B0B;
+//    background-color: #3D3D3D;
     position: absolute;
     left: 50%;
     margin-left: -174px;
@@ -392,7 +395,7 @@ h1 {
     text-align: center;
     padding: 48px 0 55px 0;
     input {
-      background: white;
+//      background: white;
       height: 48px;
       width: 348px;
       border: none;
@@ -406,7 +409,7 @@ h1 {
     content: "";
     background: image-url('dashed-line.png') repeat-x;
     height: 7px;
-    width: 840px;
+    width: 100%;
     display: inline-block;
     margin: 30px 0 0 0;
 
