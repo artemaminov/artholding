@@ -10,10 +10,10 @@ $(function() {
     var cursorIn = function(event, obj, cursor) {
         cursorIsOut = true;
         var t = $(obj),
-            cursorMargin = 0;
+            cursorMargin = 1;
 
         if (cursor == menuCursor1) {
-            cursorMargin = cursor.width() / 2 + 3;
+            cursorMargin = cursor.width() / 2 + 4;
         }
 
         cursor.addClass('transition');
