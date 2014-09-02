@@ -9,6 +9,7 @@
 //  left: 50%;
 //  margin-left: -420px;
   margin: 0 auto;
+  padding-top: 12px;
 }
 
 .header-divider {
@@ -190,10 +191,17 @@ header {
       line-height: 48px;
       border: 1px solid black;
       z-index: 1;
+      background: image-url('triangle-hover.png') -180px -8px no-repeat;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
       &:hover {
         color: white;
         background-color: #7A5217;
         border: 1px solid #7A5217;
+        background: image-url('triangle-hover.png') 0 -8px no-repeat;
         &:after {
           background: image-url('sprites.png') -235px -124px no-repeat;
         }
