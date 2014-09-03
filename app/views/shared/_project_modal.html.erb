@@ -1,15 +1,16 @@
 <div class="date">
-  <span class="month"><%= @project.finished_at.to_formatted_s :month %></span>
-  <span class="day"><%= @project.finished_at.day %></span>
+  <span class="month"><%= Russian::strftime(@project.finished_at, "%B") %></span>
+  <span class="day"><%=  Russian::strftime(@project.finished_at, "%d") %></span>
   <span class="year"><%= @project.finished_at.year %></span>
 </div>
 <div class="info">
   <div class="image">
-    <a class="fancybox" href="<%= @project.image.url :original %>"><img src="<%= @project.image.url :medium %>" alt=""/></a>
-
-    <div class="bar">
-      <span class="zoom">увеличить<i class="icn-zoom"></i></span>
-    </div>
+    <a class="fancybox" href="<%= @project.image.url :original %>">
+      <img src="<%= @project.image.url :medium %>" alt=""/>
+      <div class="bar">
+        <span class="zoom">увеличить<i class="icn-zoom"></i></span>
+      </div>
+    </a>
   </div>
   <h2><%= @project.title %></h2>
 
@@ -19,8 +20,8 @@
 
   <div class="inside-project-control">
     <% if @project.client.present? %>
-    <span class="client">Клиент: <a href="#"><%= @project.client.name %></a></span>
-    <span class="site">Посетить сайт: <a href="#"><%= @project.client.site %></a></span>
+    <span class="client">Клиент: <a href="http://<%= @project.client.site %>" rel="nofollow" target="_blank"><%= @project.client.name %></a></span>
+    <span class="site">Посетить сайт: <a href="http://<%= @project.client.site %>" rel="nofollow" target="_blank"><%= @project.client.site %></a></span>
     <% end %>
     <a class="icn-close"></a>
     <ul class="inside-project-pager">

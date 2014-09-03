@@ -34,7 +34,7 @@
 }
 
 .icn-close {
-  background: image-url('sprites.png') -247px -110px no-repeat;
+  background: image-url('sprites.png') -245px -110px no-repeat;
   display: inline-block;
   width: 19px;
   height: 19px;
@@ -120,13 +120,6 @@
     &.disabled {
       background: image-url('sprites.png') -46px -236px no-repeat;
     }
-}
-
-.selectbox-arrow {
-	background: image-url('sprites.png') -261px -70px no-repeat;
-	display: inline-block;
-	width: 32px;
-	height: 16px;
 }
 
 .thumb-up {

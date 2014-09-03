@@ -7,7 +7,9 @@
   top: 60px;
   left: 0;
   z-index: 10;
-  box-shadow: 0px 0px 40px -10px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.35);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.35);
+  box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.35);
   .date {
     margin: 24px 0 0 24px;
     padding-right: 9px;
@@ -29,6 +31,7 @@
     }
     .day {
       font: 38pt 'cgothic';
+      line-height: 38pt;
     }
   }
   .info {
@@ -108,4 +111,12 @@
       }
     }
   }
+}
+
+a.fancybox:hover .bar {
+  opacity: 1;
+}
+a.fancybox .bar {
+  opacity: 0;
+  transition: all 0.2s;
 }

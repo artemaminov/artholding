@@ -16,3 +16,7 @@ $(".project-modal .fancybox").fancybox({
   fitToView: false,
   maxWidth: "100%"
 });
+
+$(".fancybox").on("mouseover", function(event) {
+  event.preventDefault();
+});

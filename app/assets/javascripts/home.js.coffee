@@ -16,8 +16,24 @@ $ ->
       $('.order .form').hide()
       $('.order .order-complete').show()
 
+  $(window).scroll ->
+    window_top = $(window).scrollTop()
+    div_top = $('.artholding-logo').offset().top + 212
+    if (window_top > div_top)
+      $('.navigation').addClass('stick header-bg')
+    else
+      $('.navigation').removeClass('stick header-bg')
+
+  $("#nav a").click (evn) ->
+    evn.preventDefault()
+    $('html,body').scrollTo(this.hash, 500, {offset: -90})
+
   $('.left-form select').selectmenu
     width: 336
+    position:
+      my: "left top+8"
+      at: "left bottom"
+      collision: "none"
 
   $(".main-carousel").carouFredSel
     circular: true,
@@ -76,16 +92,3 @@ $ ->
         next:
           button: -> tab.find('.projects-pager-right')
         swipe: true
-
-  $(window).scroll ->
-    window_top = $(window).scrollTop()
-    div_top = $('.artholding-logo').offset().top + 212
-    if (window_top > div_top)
-      $('.navigation').addClass('stick header-bg')
-    else
-      $('.navigation').removeClass('stick header-bg')
-
-  $("#nav a").click (evn) ->
-    evn.preventDefault()
-    $('html,body').scrollTo(this.hash, 500, {offset: -90})
-

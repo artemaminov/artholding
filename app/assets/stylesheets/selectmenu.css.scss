@@ -5,7 +5,7 @@
   text-decoration: none;
   cursor: pointer;
   height: 42px;
-  background: white;
+  background-color: #F5F5F5;
   outline: none;
   box-shadow: inset 0 0 5px grey;
   &:focus {
@@ -20,17 +20,18 @@
   top: 0;
   left: 0;
   display: none;
-  background: white;
+  background-color: #F5F5F5;
   outline: none;
+  border: 1px solid #7A5217;
   ul {
-    height: 114px;
+    height: 122px;
     overflow-y: auto;
     overflow-x: hidden;
     li {
       margin: 8px 0 0 10px;
       cursor: pointer;
       width: 274px;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #F5F5F5;
       &:hover {
         border-bottom: 1px solid black;
       }
@@ -39,23 +40,51 @@
       }
     }
   }
+  &.ui-selectmenu-open:before {
+    content: "";
+    background: image-url('sprites.png') -261px -70px no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: -16px;
+  }
 }
 
 .ui-selectmenu-open {
   display: block;
 }
 
-.ui-icon.ui-icon-triangle-1-s {
+.ui-corner-all .ui-icon.ui-icon-triangle-1-s {
   background: image-url('sprites.png') -280px -96px no-repeat;
   display: inline-block;
   width: 10px;
   height: 8px;
   position: absolute;
-  right: 13px;
+  right: 15px;
   top: 16px;
+  &:before {
+    content: "";
+    width: 2px;
+    height: 42px;
+    background-color: black;
+    position: absolute;
+    top: -16px;
+    right: 25px;
+  }
+}
+.ui-corner-top .ui-icon.ui-icon-triangle-1-s {
+  background-color: #7A5217;
+  display: inline-block;
+  width: 40px;
+  height: 42px;
+  position: absolute;
+  right: 0px;
+  border-left: 2px solid black;
 }
 
 .ui-selectmenu-text {
   line-height: 40px;
-  padding: 10px;
+  padding: 10px 6px;
 }

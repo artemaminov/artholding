@@ -71,10 +71,10 @@
         <div class="left-form">
           <%= text_field_tag 'order[name]', nil, placeholder: "Имя", type: "text" %>
           <%= email_field_tag 'order[email]', nil, placeholder: "E-mail", type: "text" %>
-          <%= select_tag 'order[group]', options_from_collection_for_select(@groups, "id", "name") %>
+          <%= select_tag 'order[group]', options_from_collection_for_select(@groups, "id", "name", disabled: nil), prompt: "Выберите тему" %>
         </div>
         <div class="right-form">
-          <%= text_area_tag 'order[text]', nil, cols: 30, rows: 10 %>
+          <%= text_area_tag 'order[text]', nil, cols: 30, rows: 10, placeholder: "Напишите ваши пожелания" %>
         </div>
         <div class="control">
           <%= submit_tag "Сделать заказ", disable_with: "Отправка сообщения..." %>
