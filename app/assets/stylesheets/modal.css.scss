@@ -1,5 +1,16 @@
 .project-modal {
+  -webkit-transition: min-height 2s;
+  -moz-transition: min-height 2s;
+  -ms-transition: min-height 2s;
+  -o-transition: min-height 2s;
+  transition: min-height 2s;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
   display: none;
+  opacity: 0;
   height: 800px;
   width: 840px;
   position: absolute;
@@ -45,6 +56,7 @@
       position: relative;
       width: 702px;
       height: 416px;
+      border: 1px solid black;
       img {
         width: 702px;
         height: 416px;
@@ -113,10 +125,17 @@
   }
 }
 
-a.fancybox:hover .bar {
-  opacity: 1;
-}
-a.fancybox .bar {
-  opacity: 0;
-  transition: all 0.2s;
+.fancybox {
+  display: block;
+  .bar {
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  &:hover .bar {
+    opacity: 1;
+  }
 }

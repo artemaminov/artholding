@@ -19,9 +19,10 @@ ActiveAdmin.register Client do
   index do
     column :name
     column :site
-    column :logo do |logo|
-      image_tag logo.image.url :client_logo
+    column :logo do |client|
+      image_tag client.logo.url :client_logo
     end
+    actions
   end
 
   form do |f|

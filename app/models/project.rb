@@ -7,8 +7,6 @@ class Project < ActiveRecord::Base
   validates :title, :about, :finished_at, :group_id, :image, presence: true
   validates_attachment :image, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
-  # accepts_nested_attributes_for :group, :client
-
   def self.carouselled
     where is_in_carousel: true
   end

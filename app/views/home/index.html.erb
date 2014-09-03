@@ -103,7 +103,10 @@
       <div class="clients-carousel">
         <% @clients.each do |client| %>
         <div class="client">
-          <img src="<%= client.logo.url :client_logo %>" alt=""/>
+          <div class="cf">
+            <img src="<%= client.logo.url :client_logo %>" alt=""/>
+            <img src="<%= client.logo.url :client_logo_grey %>" alt=""/>
+          </div>
         </div>
         <% end %>
       </div>

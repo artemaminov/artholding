@@ -149,6 +149,12 @@ header {
 
 
 #tabs {
+  height: auto;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   .project {
     width: 266px;
     height: 354px;
@@ -338,7 +344,20 @@ h1 {
     .client {
       display: block;
       float: left;
-      img {
+      .cf {
+        position: relative;
+        display: inline-block;
+        img {
+          position: absolute;
+          -webkit-transition: opacity 0.3s;
+          -moz-transition: opacity 0.3s;
+          -ms-transition: opacity 0.3s;
+          -o-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+          &:hover {
+            opacity: 0;
+          }
+        }
 //        height: 175px;
 //        width: 266px;
       }

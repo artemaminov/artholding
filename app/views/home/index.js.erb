@@ -3,13 +3,14 @@ $(".project-modal").attr("id", <%= @project.id %>).html("<%= j render 'shared/pr
 if ($(".project-modal:hidden").length != 0) {
   var prev_tabs_div_height = $("#tabs").height();
 }
-$("#tabs").height("870px");
+$("#tabs").css("min-height", "870px");
 
 $(".project-modal .icn-close").click(function(evn){
   evn.preventDefault();
-  $(".project-modal").hide();
+  $(".project-modal").fadeTo(0.3, 0).hide();
+//  $(".project-modal").hide();
   $(this).unbind("click");
-  $("#tabs").height("auto");
+  $("#tabs").css("min-height", prev_tabs_div_height);
 });
 
 $(".project-modal .fancybox").fancybox({

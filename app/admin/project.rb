@@ -26,8 +26,8 @@ ActiveAdmin.register Project do
       project.group.name
     end
     column :client
-    column :image do |image|
-      image_tag image.image.url :small, width: "266px"
+    column :image do |project|
+      image_tag project.image.url :small, width: "266px"
     end
     actions
   end
