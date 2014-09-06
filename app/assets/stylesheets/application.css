@@ -12,8 +12,6 @@
  *
  *= require_directory ./reset
  *= require jquery.fancybox
- *= require jquery.fancybox-buttons
- *= require jquery.fancybox-thumbs
  *= require_directory ./fonts
  *= require_tree .
  *= require home

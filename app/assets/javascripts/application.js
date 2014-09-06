@@ -17,6 +17,4 @@
 //= require jquery-ui/dialog
 //= require turbolinks
 //= require jquery.fancybox
-//= require jquery.fancybox-buttons
-//= require jquery.fancybox-thumbs
 //= require_tree .
