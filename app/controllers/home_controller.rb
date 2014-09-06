@@ -17,6 +17,12 @@ class HomeController < ApplicationController
     end
   end
 
+  def zoom
+    @project = Project.find params[:id]
+    @group = params[:group]
+    render partial: 'shared/project_zoom'
+  end
+
   def order
     respond_to do |format|
 

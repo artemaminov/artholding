@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'project/:id' => 'home#index', as: :project
+  get 'project/zoom/:id' => 'home#zoom', as: :project_zoom
   post 'order' => 'home#order', as: :order
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

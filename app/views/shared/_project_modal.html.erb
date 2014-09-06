@@ -5,12 +5,12 @@
 </div>
 <div class="info">
   <div class="image">
-    <a class="fancybox" href="<%= @project.image.url :original %>">
+    <%= link_to project_zoom_path(id: @project.id, group: @group), class: "fancybox fancybox.ajax" do %>
       <img src="<%= @project.image.url :medium %>" alt=""/>
       <div class="bar">
         <span class="zoom">увеличить<i class="icn-zoom"></i></span>
       </div>
-    </a>
+    <% end %>
   </div>
   <h2><%= @project.title %></h2>
 
@@ -25,11 +25,11 @@
     <% end %>
     <a class="icn-close"></a>
     <ul class="inside-project-pager">
-      <li class="projects-pager-left <%= 'disabled' if @project.prev(@group).nil? %>">
-        <%= link_to "", {id: @project.prev(@group), group: @group}, remote: true %></li>
+      <li class="projects-pager-left <%= 'disabled' if @project.prev(@group).blank? %>">
+        <%= link_to "", project_path(id: @project.prev(@group), group: @group), remote: true %></li>
       <li class="projects-pager"></li>
-      <li class="projects-pager-right <%= 'disabled' if @project.next(@group).nil? %>">
-        <%= link_to "", {id: @project.next(@group), group: @group}, remote: true %></li>
+      <li class="projects-pager-right <%= 'disabled' if @project.next(@group).blank? %>">
+        <%= link_to "", project_path(id: @project.next(@group), group: @group), remote: true %></li>
     </ul>
   </div>
 </div>

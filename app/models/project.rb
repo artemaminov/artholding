@@ -20,7 +20,7 @@ class Project < ActiveRecord::Base
     next_project = next_project.of_group(self.group.id) if group == 'true'
     next_project = next_project.order(id: :asc).first
 
-    return nil if next_project.blank? || next_project.id < self.id
+    return 0 if next_project.blank? || next_project.id < self.id
 
     next_project
   end
@@ -30,7 +30,7 @@ class Project < ActiveRecord::Base
     prev_project = prev_project.of_group(self.group.id) if group == 'true'
     prev_project = prev_project.order(id: :desc).first
 
-    return nil if prev_project.blank? || prev_project.id > self.id
+    return 0 if prev_project.blank? || prev_project.id > self.id
 
     prev_project
   end
