@@ -14,7 +14,7 @@ ActiveAdmin.register Client do
   #  permitted
   # end
 
-  permit_params :name, :site, :logo
+  permit_params :name, :site, :logo, :logo_grey
 
   index do
     column :name
@@ -30,6 +30,7 @@ ActiveAdmin.register Client do
       f.input :name
       f.input :site
       f.input :logo
+      f.input :logo_grey
     end
     f.actions
   end

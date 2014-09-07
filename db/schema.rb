@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140907063809) do
+ActiveRecord::Schema.define(version: 20140907072151) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,14 +50,18 @@ ActiveRecord::Schema.define(version: 20140907063809) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "clients", force: true do |t|
-    t.string   "name",              limit: 30
-    t.string   "site",              limit: 30
+    t.string   "name",                   limit: 30
+    t.string   "site",                   limit: 30
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "logo_grey_file_name"
+    t.string   "logo_grey_content_type"
+    t.integer  "logo_grey_file_size"
+    t.datetime "logo_grey_updated_at"
   end
 
   create_table "groups", force: true do |t|

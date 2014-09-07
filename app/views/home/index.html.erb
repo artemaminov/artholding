@@ -104,11 +104,11 @@
         <% @clients.each do |client| %>
         <div class="client">
           <div class="cf">
-            <img src="<%= client.logo.url :client_logo %>" alt=""/>
+            <img src="<%= client.logo.url %>" alt=""/>
             <% unless client.site.blank? %>
             <a href="http://<%= client.site %>" rel="nofollow" target="_blank">
             <% end %>
-            <img src="<%= client.logo.url :client_logo_grey %>" alt=""/>
+            <img src="<%= client.logo_grey.url %>" alt=""/>
             <% unless client.site.blank? %>
             </a>
             <% end %>
