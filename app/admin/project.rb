@@ -13,9 +13,7 @@ ActiveAdmin.register Project do
   #  permitted
   # end
 
-  permit_params :title, :about, :finished_at, :image, :group_id, :client_id, :is_in_carousel
-
-  jcropable
+  permit_params :title, :about, :finished_at, :preview, :carousel, :main, :group_id, :client_id, :is_in_carousel
 
   index do
     column :title do |project|
@@ -27,7 +25,7 @@ ActiveAdmin.register Project do
     end
     column :client
     column :image do |project|
-      image_tag project.image.url :small, width: "266px"
+      image_tag project.preview.url :small, width: "266px"
     end
     actions
   end
@@ -37,7 +35,9 @@ ActiveAdmin.register Project do
       f.input :group
       f.input :title
       f.input :about, input_html: {rows: 5}
-      f.input :image, as: :jcropable, jcrop_options: { aspectRatio: 1.52, minSize: [702, 416] }
+      f.input :preview
+      f.input :carousel
+      f.input :main
       f.input :finished_at
       f.input :client
       f.input :is_in_carousel

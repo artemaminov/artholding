@@ -8,7 +8,8 @@
     <div class="row">
   <% end %>
   <div class="project">
-    <img src="<%= project.image.url :small %>" alt=""/>
+    <img src="<%= project.preview.url :small %>" alt="<%= project.title  %>"/>
+    <div class="selectbox-arrow"></div>
     <h2><%= project.title %></h2>
     <p><%= project.group.name %></p>
     <%= link_to "Смотреть", project_path(project, group: group), remote: true %>

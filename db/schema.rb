@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140828044747) do
+ActiveRecord::Schema.define(version: 20140907063809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,18 +68,26 @@ ActiveRecord::Schema.define(version: 20140828044747) do
   end
 
   create_table "projects", force: true do |t|
-    t.string   "title",              limit: 30
+    t.string   "title",                 limit: 30
     t.string   "about"
     t.date     "finished_at"
     t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
     t.integer  "group_id"
-    t.boolean  "is_in_carousel",                default: false
+    t.boolean  "is_in_carousel",                   default: false
+    t.string   "carousel_file_name"
+    t.string   "carousel_content_type"
+    t.integer  "carousel_file_size"
+    t.datetime "carousel_updated_at"
+    t.string   "main_file_name"
+    t.string   "main_content_type"
+    t.integer  "main_file_size"
+    t.datetime "main_updated_at"
+    t.string   "preview_file_name"
+    t.string   "preview_content_type"
+    t.integer  "preview_file_size"
+    t.datetime "preview_updated_at"
   end
 
   add_index "projects", ["client_id"], name: "index_projects_on_client_id", using: :btree

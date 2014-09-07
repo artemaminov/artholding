@@ -46,7 +46,6 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'active_admin_jcrop'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'russian'

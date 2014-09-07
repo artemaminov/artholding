@@ -6,7 +6,7 @@
 <div class="info">
   <div class="image">
     <%= link_to project_zoom_path(id: @project.id, group: @group), class: "fancybox fancybox.ajax" do %>
-      <img src="<%= @project.image.url :medium %>" alt=""/>
+      <img src="<%= @project.preview.url :medium %>" alt=""/>
       <div class="bar">
         <span class="zoom">увеличить<i class="icn-zoom"></i></span>
       </div>

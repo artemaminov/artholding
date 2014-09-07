@@ -1,7 +1,7 @@
 <div class="main-carousel-wrapper">
   <div class="main-carousel">
     <% Project.carouselled.each_with_index do |project| %>
-    <div style="background-image: url(<%= project.image.url :carousel %>)"></div>
+    <div style="background-image: url(<%= project.carousel.url %>)"></div>
     <% end %>
   </div>
   <div class="main-carousel-pager"></div>
@@ -105,7 +105,13 @@
         <div class="client">
           <div class="cf">
             <img src="<%= client.logo.url :client_logo %>" alt=""/>
+            <% unless client.site.blank? %>
+            <a href="http://<%= client.site %>" rel="nofollow" target="_blank">
+            <% end %>
             <img src="<%= client.logo.url :client_logo_grey %>" alt=""/>
+            <% unless client.site.blank? %>
+            </a>
+            <% end %>
           </div>
         </div>
         <% end %>
