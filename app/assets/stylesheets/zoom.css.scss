@@ -3,10 +3,11 @@
   .wrapper {
     overflow: hidden;
     width: inherit;
-    background-color: #F5F5F5;;
+    background-color: #F5F5F5;
     .bar {
       width: inherit;
       margin-bottom: 14px;
+      background-color: #F5F5F5;
       &.stick {
         position: fixed;
         width: inherit;

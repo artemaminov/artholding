@@ -9,7 +9,7 @@ $ ->
     activate: -> $('.carousel').trigger('updateSizes')
 
   # Portfolio AJAX Project open
-  $("a[data-remote]")
+  $(".project a[data-remote]")
     .on 'ajax:success', (e, data, status, xhr) ->
       $('.project-modal')
         .show()
