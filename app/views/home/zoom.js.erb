@@ -1,2 +1,6 @@
-$(".wrapper img").replaceWith("<%= j image_tag @project.main.url %>");
+var image = $(".wrapper img");
+image.hide();
+image.attr("src", "<%= j @project.main.url %>").load(function() {
+  image.show();
+});
 $(".wrapper .inside-project-pager").replaceWith("<%= j render "shared/project_pager" %>");
