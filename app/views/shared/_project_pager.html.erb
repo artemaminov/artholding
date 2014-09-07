@@ -1,0 +1,7 @@
+<ul class="inside-project-pager">
+  <li class="projects-pager-left <%= 'disabled' if @project.prev(@group).nil? %>">
+    <%= link_to "", project_zoom_path(id: @project.prev(@group), group: @group), remote: true %></li>
+  <li class="projects-pager"></li>
+  <li class="projects-pager-right <%= 'disabled' if @project.next(@group).nil? %>">
+    <%= link_to "", project_zoom_path(id: @project.next(@group), group: @group), remote: true %></li>
+</ul>

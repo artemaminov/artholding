@@ -25,6 +25,7 @@ $(".project-modal .fancybox").fancybox({
   fitToView: false,
   maxWidth: "100%",
   closeBtn: false,
+  type: "ajax",
   afterShow: function() {
     $(".bar .icn-close").click(function() {
       $.fancybox.close();
@@ -45,5 +46,6 @@ $(".project-modal .fancybox").fancybox({
 });
 
 $(".fancybox").on("mouseover", function(event) {
+  // Prevent .bar to recieve mouseover
   event.preventDefault();
 });
