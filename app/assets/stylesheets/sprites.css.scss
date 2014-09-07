@@ -122,6 +122,16 @@
     }
 }
 
+.selectbox-arrow {
+  background: url(/assets/sprites.png) -261px -70px no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+  position: relative;
+  top: -16px;
+  left: 118px;
+}
+
 .thumb-up {
 	background: image-url('sprites.png') -235px 0px no-repeat;
 	display: inline-block;
