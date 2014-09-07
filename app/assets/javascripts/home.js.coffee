@@ -13,7 +13,6 @@ $ ->
     .on 'ajax:success', (e, data, status, xhr) ->
       $('.project-modal')
         .show()
-      $('.project-modal')
         .fadeTo(0.8, 1)
 
   # Send order request

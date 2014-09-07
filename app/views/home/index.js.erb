@@ -1,19 +1,25 @@
 $(".project-modal").attr("id", <%= @project.id %>).html("<%= j render 'shared/project_modal' %>");
 
 if ($(".project-modal:hidden").length != 0) {
-  var prev_tabs_div_height = $("#tabs").height();
+  var prev_tabs_div_height = $("#tabs").css("min-height");
 }
 $("#tabs").css("min-height", "870px");
 
 $(".project-modal .icn-close").click(function(evn){
   evn.preventDefault();
-  $(".project-modal").fadeTo(0.3, 0).hide();
-//  $(".project-modal").hide();
+  $(".project-modal").fadeTo(0.5, 0);
+  setTimeout(function() {
+    $(".project-modal").hide();
+  }, 500);
   $(this).unbind("click");
   $("#tabs").css("min-height", prev_tabs_div_height);
+  setTimeout(function() {
+    $("#tabs").css("min-height", "auto");
+  }, 500);
 });
 
 $(".project-modal .fancybox").fancybox({
+  live: false,
   padding: 0,
   margin : 0,
   fitToView: false,
