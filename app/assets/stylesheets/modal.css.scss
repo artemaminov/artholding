@@ -62,7 +62,7 @@
         height: 416px;
       }
       .bar {
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 672px;
         height: 38px;
@@ -127,8 +127,9 @@
 
 .fancybox {
   display: block;
+  height: 416px;
+  overflow: hidden;
   .bar {
-    opacity: 0;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
@@ -136,6 +137,6 @@
     transition: all 0.2s;
   }
   &:hover .bar {
-    opacity: 1;
+    bottom: 41px !important;
   }
 }

@@ -33,7 +33,7 @@ $ ->
   # Main navbar section follow
   $("#nav a").click (evn) ->
     evn.preventDefault()
-    $('html,body').scrollTo(this.hash, 500, {offset: -90})
+    $('html,body').scrollTo(this.hash, 500, {offset: -70})
 
   # Order request form dropdown menu
   $('.left-form select').selectmenu
