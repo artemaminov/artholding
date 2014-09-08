@@ -1,5 +1,7 @@
 ActiveAdmin.register Project do
 
+  menu priority: 2
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -39,11 +41,11 @@ ActiveAdmin.register Project do
       f.input :client
     end
     f.inputs "Изображения" do
-      f.input :preview
-      f.input :carousel
       f.input :main, input_html: {
           :onchange => "if ($(this).val().split('.').pop().toLowerCase() == 'swf') {$('.swf-fields').parent().show(); $('#project_carousel_input').hide(); $('#project_is_in_carousel_input').hide(); $('#project_is_in_carousel_input input').prop('checked', false);} else {$('.swf-fields').parent().hide(); $('#project_carousel_input').show(); $('#project_is_in_carousel_input').show(); $('.swf-fields').val(null);}"
       }
+      f.input :preview
+      f.input :carousel
       f.input :swf_width, input_html: { class: "swf-fields" }
       f.input :swf_height, input_html: { class: "swf-fields" }
     end

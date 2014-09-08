@@ -19,16 +19,52 @@ ru:
         reset_password_sent_at: Сброс пароля
         remember_created_at: Cookies созданы
         sign_in_count: Количество авторизаций
-      carousel:
-        header: Заголовок
-        body: Текст
-        banner: Изображение
-        created_at: Создан
-        updated_at: Изменен
+      client:
+        name: Наименование
+        site: Адрес сайта
+        logo: Логотип
+        logo_grey: Логотип (серый)
+      project:
+        group: Тип проекта
+        title: Наименование
+        about: О проекте
+        finished_at: Дата завершения работ по проекту
+        client: Клиент
+        preview: Предпросмотр
+        carousel: Карусель
+        main: Главное или SWF
+        is_in_carousel: Поместить проект в карусель
+        swf_width: Ширина SWF
+        swf_height: Высота SWF
+      group:
+        name: Наименование
+        sorting_position: Позиция по счету
     models:
-      admin_user: Пользователи
-      carousel:
-        one: Рекламу
-        other: Реклама
+      admin_user:
+        one: Пользователя
+        few: Пользователя
+        many: Пользователей
+        other: Пользователи
+      client:
+        one: Клиента
+        few: Клиента
+        many: Клиентов
+        other: Клиенты
+      group:
+        one: Тип проекта
+        few: Типа Проектов
+        many: Типов проектов
+        other: Типы проектов
+      project:
+        one: Проект
+        few: Проекта
+        many: Проектов
+        other: Проекты
   formtastic:
-    create: Создать %{model}
+    actions:
+      create: Создать %{model}
+      update: Сохранить изменения %{model}
+      submit: Отправить
+      cancel: Отменить
+      reset: Очистить форму
+      require: Необходимо

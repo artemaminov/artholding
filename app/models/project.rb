@@ -19,6 +19,10 @@ class Project < ActiveRecord::Base
     where group_id: group_id
   end
 
+  def self.recent amount
+    limit amount
+  end
+
   def next(group)
     next_project = Project.where(["id > :id", id: self.id])
     next_project = next_project.of_group(self.group.id) if group == 'true'
