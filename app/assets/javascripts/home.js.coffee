@@ -18,8 +18,8 @@ $ ->
   # Send order request
   $(".order .form form")
     .on 'ajax:success', (e, data, status, xhr) ->
-      $('.order .form').hide()
-      $('.order .order-complete').show()
+      $('.order .form').addClass("hidden")
+      $('.order .order-complete').addClass("visible")
 
   # Page scrolling main navbar bar
   $(window).scroll ->

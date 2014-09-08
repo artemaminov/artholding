@@ -309,8 +309,19 @@ h1 {
     }
   }
   .order-complete {
-    display: none;
+    opacity: 0;
+    transition: visiblity 0.3s, opacity 0.3s;
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    margin-left: -174px;
+    left: 50%;
+//    display: none;
     text-align: center;
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
     .thumb-up {
       margin-top: 20px;
     }
@@ -403,6 +414,13 @@ h1 {
 
 // Form
 .form {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.3s, opacity 0.3s;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
   .right-form {
     float: right;
     textarea {
