@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140907072151) do
+ActiveRecord::Schema.define(version: 20140908060522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,6 +92,8 @@ ActiveRecord::Schema.define(version: 20140907072151) do
     t.string   "preview_content_type"
     t.integer  "preview_file_size"
     t.datetime "preview_updated_at"
+    t.integer  "swf_width"
+    t.integer  "swf_height"
   end
 
   add_index "projects", ["client_id"], name: "index_projects_on_client_id", using: :btree

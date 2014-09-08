@@ -5,10 +5,39 @@
 </div>
 <div class="info">
   <div class="image">
+    <% if @project.swf_width.blank? %>
     <%= link_to project_zoom_path(id: @project.id, group: @group), class: "fancybox" do %>
-      <img src="<%= @project.preview.url :medium %>" alt=""/>
+      <div class="inner-border">
+        <img src="<%= @project.preview.url :medium %>" alt="<%= @project.title %>"/>
+      </div>
       <div class="bar">
         <span class="zoom">увеличить<i class="icn-zoom"></i></span>
+      </div>
+    <% end %>
+    <% else %>
+      <div class="table">
+        <div class="row">
+          <div class="cell">
+            <div class="inner-border">
+              <img src="<%= @project.preview.url :swf_preview %>" alt="<%= @project.title %>"/>
+            </div>
+          </div>
+          <div class="cell">
+            <i class="cross"></i>
+          </div>
+          <div class="cell">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="<%= @project.swf_width %>" height="<%= @project.swf_height %>">
+              <param name="movie" value="<%= @project.main.url %>" />
+              <!--[if !IE]>-->
+              <object type="application/x-shockwave-flash" data="<%= @project.main.url %>" width="<%= @project.swf_width %>" height="<%= @project.swf_height %>">
+              <!--<![endif]-->
+              <p>Alternative content</p>
+              <!--[if !IE]>-->
+              </object>
+        <!--<![endif]-->
+            </object>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>

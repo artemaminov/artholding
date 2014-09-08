@@ -56,11 +56,19 @@
       position: relative;
       width: 702px;
       height: 416px;
+      .cell:first-child + .cell {
+        width: 100%;
+        vertical-align: middle;
+        text-align: center;
+      }
 //      img {
 //        border: 1px solid black;
 //        width: 702px;
 //        height: 414px;
 //      }
+      object {
+        float: right;
+      }
       .bar {
         position: relative;
         bottom: 0;

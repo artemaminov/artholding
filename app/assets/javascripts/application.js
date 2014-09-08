@@ -10,13 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require turbolinks
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/tabs
 //= require jquery-ui/selectmenu
 //= require jquery-ui/dialog
-//= //require jquery-ui/effect
-//= //require jquery-ui/effect-slide
-//= require turbolinks
 //= require jquery.fancybox
 //= require_tree .

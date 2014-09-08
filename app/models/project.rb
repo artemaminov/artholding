@@ -2,14 +2,14 @@ class Project < ActiveRecord::Base
 
   belongs_to :client
   belongs_to :group
-  has_attached_file :preview, :styles => { small: "266x175#", medium: "702x416#" }
+  has_attached_file :preview, :styles => { small: "266x175>#", medium: "702x416>#", swf_preview: "x400" }
   has_attached_file :carousel
   has_attached_file :main
 
-  validates :title, :about, :finished_at, :group_id, :preview, :carousel, :main, presence: true
-  validates_attachment :preview, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-  validates_attachment :carousel, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-  validates_attachment :main, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates :title, :about, :finished_at, :group_id, :main, presence: true
+  validates_attachment :preview, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates_attachment :carousel, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates_attachment :main, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif", "application/x-shockwave-flash"] }
 
   def self.carouselled
     where is_in_carousel: true

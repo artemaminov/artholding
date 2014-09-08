@@ -33,6 +33,13 @@
   height: 24px;
 }
 
+.cross {
+  background: image-url('sprites.png') -235px -138px no-repeat;
+  display: inline-block;
+  width: 58px;
+  height: 59px;
+}
+
 .icn-close {
   background: image-url('sprites.png') -245px -110px no-repeat;
   display: inline-block;
