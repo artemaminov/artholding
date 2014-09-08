@@ -64,6 +64,15 @@ footer {
   height: 40px;
 }
 
+.inner-border, .inner-border img {
+  border: 1px solid black;
+  overflow: hidden;
+  float: left;
+}
+.inner-border img {
+  margin: -2px;
+}
+
 // UI
 header {
   height: 326px;
@@ -165,7 +174,7 @@ header {
       position: relative;
     }
     h2 {
-      top: 36px;
+      top: 12px;
       &:after {
         content: "";
         display: block;
@@ -180,7 +189,7 @@ header {
     p {
       font-style: italic;
       font-size: 12pt;
-      top: 77px;
+      top: 54px;
     }
     h2, a {
       font: 12pt 'cgothic';
