@@ -7,10 +7,7 @@ $("#tabs").css("min-height", "870px");
 
 $(".project-modal .icn-close").click(function(evn){
   evn.preventDefault();
-  $(".project-modal").fadeTo(0.5, 0);
-  setTimeout(function() {
-    $(".project-modal").hide();
-  }, 500);
+  $(".project-modal").animate({ left: "-9999px"}, 800);
   $(this).unbind("click");
   $("#tabs").css("min-height", prev_tabs_div_height);
   setTimeout(function() {
@@ -26,6 +23,13 @@ $(".project-modal .fancybox").fancybox({
   maxWidth: "100%",
   closeBtn: false,
   type: "ajax",
+  afterClose: function() {
+    $.fancybox.hideLoading();
+  },
+  beforeShow: function() {
+    $('.fancybox-type-ajax').css('visibility', 'hidden');
+    $.fancybox.showLoading();
+  },
   afterShow: function() {
     $(".bar .icn-close").click(function() {
       $.fancybox.close();

@@ -107,11 +107,11 @@
             <img src="<%= client.logo.url %>" alt=""/>
             <% unless client.site.blank? %>
             <a href="http://<%= client.site %>" rel="nofollow" target="_blank">
+            <% else %>
+            <a>
             <% end %>
-            <img src="<%= client.logo_grey.url %>" alt=""/>
-            <% unless client.site.blank? %>
+              <img src="<%= client.logo_grey.url %>" alt=""/>
             </a>
-            <% end %>
           </div>
         </div>
         <% end %>

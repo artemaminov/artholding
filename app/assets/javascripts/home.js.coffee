@@ -12,9 +12,8 @@ $ ->
   $(".project a[data-remote]")
     .on 'ajax:success', (e, data, status, xhr) ->
       $('.project-modal')
-        .show()
-        .fadeTo(0.8, 1)
-
+        .css("left", "9999px")
+        .animate({ left: "0"}, 800)
   # Send order request
   $(".order .form form")
     .on 'ajax:success', (e, data, status, xhr) ->
@@ -59,7 +58,9 @@ $ ->
       container: ".main-carousel-pager"
       anchorBuilder: (nr) ->
         '<a href="#'+nr+'"></a>'
-    auto: true,
+    auto:    {
+      timeoutDuration: 6000
+    }
     swipe: true
 
   $(".clients-carousel").carouFredSel
@@ -69,7 +70,7 @@ $ ->
     height: 150,
 #    width: 840,
     items:
-      visible: 3,
+      visible: 4,
       width: 280,
       height: 175,
       minimum: 3
