@@ -362,13 +362,13 @@ h1 {
   .clients-carousel {
     width: 840px;
     .client {
-      display: block;
-      float: left;
+      display: inline-block;
+      text-align: center;
       .cf {
         position: relative;
         display: inline-block;
-        img {
-          position: absolute;
+        img:first-child {
+          position: relative;
           -webkit-transition: opacity 0.3s;
           -moz-transition: opacity 0.3s;
           -ms-transition: opacity 0.3s;
@@ -377,6 +377,11 @@ h1 {
           &:hover {
             opacity: 0;
           }
+        }
+        img:first-child + img {
+          position: absolute;
+          top: 0;
+          left: 0;
         }
 //        height: 175px;
 //        width: 266px;
