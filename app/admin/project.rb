@@ -42,7 +42,7 @@ ActiveAdmin.register Project do
     end
     f.inputs "Изображения" do
       f.input :main, input_html: {
-          :onchange => "if ($(this).val().split('.').pop().toLowerCase() == 'swf') {$('.swf-fields').parent().show(); $('#project_carousel_input').hide(); $('#project_is_in_carousel_input').hide(); $('#project_is_in_carousel_input input').prop('checked', false);} else {$('.swf-fields').parent().hide(); $('#project_carousel_input').show(); $('#project_is_in_carousel_input').show(); $('.swf-fields').val(null);}"
+          :onchange => "if ($(this).val().split('.').pop().toLowerCase() == 'swf') {$('.swf-fields').parent().show();} else {$('.swf-fields').parent().hide(); $('.swf-fields').val(null);}"
       }
       f.input :preview
       f.input :carousel
