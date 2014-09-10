@@ -53,12 +53,6 @@
     <span class="site">Посетить сайт: <a href="http://<%= @project.client.site %>" rel="nofollow" target="_blank"><%= @project.client.site %></a></span>
     <% end %>
     <a class="icn-close"></a>
-    <ul class="inside-project-pager">
-      <li class="projects-pager-left <%= 'disabled' if @project.prev(@group).blank? %>">
-        <%= link_to "", project_path(id: @project.prev(@group), group: @group), remote: true %></li>
-      <li class="projects-pager"></li>
-      <li class="projects-pager-right <%= 'disabled' if @project.next(@group).blank? %>">
-        <%= link_to "", project_path(id: @project.next(@group), group: @group), remote: true %></li>
-    </ul>
+    <%= render partial: "shared/project_pager" %>
   </div>
 </div>

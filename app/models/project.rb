@@ -11,34 +11,35 @@ class Project < ActiveRecord::Base
   validates_attachment :carousel, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   validates_attachment :main, presence: true, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif", "application/x-shockwave-flash"] }
 
-  def self.carouselled
-    where is_in_carousel: true
+  attr_accessor :next_one, :prev_one
+
+  scope :carouselled, -> { where is_in_carousel: true }
+  scope :of_group, ->(group_id) { where group_id: group_id }
+  scope :recent, ->(amount) { limit amount }
+
+  def self.find_neighbours id, group
+    project = self.find id
+    project.next_one = project.next_project group
+    project.prev_one = project.prev_project group
+    project
   end
 
-  def self.of_group group_id
-    where group_id: group_id
-  end
-
-  def self.recent amount
-    limit amount
-  end
-
-  def next(group)
+  def prev_project(group)
     next_project = Project.where(["id > :id", id: self.id])
     next_project = next_project.of_group(self.group.id) if group == 'true'
     next_project = next_project.order(id: :asc).first
 
-    return 0 if next_project.blank? || next_project.id < self.id
+    return nil if next_project.blank? || next_project.id < self.id
 
     next_project
   end
 
-  def prev(group)
+  def next_project(group)
     prev_project = Project.where(["id < :id", id: self.id])
     prev_project = prev_project.of_group(self.group.id) if group == 'true'
     prev_project = prev_project.order(id: :desc).first
 
-    return 0 if prev_project.blank? || prev_project.id > self.id
+    return nil if prev_project.blank? || prev_project.id > self.id
 
     prev_project
   end
