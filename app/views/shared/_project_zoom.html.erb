@@ -8,17 +8,16 @@
   </div>
 </div>
 
-<script>
-  $(function() {
-    $(".wrapper img").load(function() {
-      setTimeout(function() {
-        $('.fancybox-type-ajax').css('visibility', 'visible');
-        $.fancybox.hideLoading();
-      }, 400)
-    });
+<script type="text/javascript">
+  $(".wrapper img").load(function() {
+    $.fancybox.update();
+    setTimeout(function() {
+      $('.fancybox-type-ajax').css('visibility', 'visible');
+      $.fancybox.hideLoading();
+    }, 500)
+  });
 
-    $(".fancybox-inner a[data-remote]").click(function() {
-      $.fancybox.showLoading();
-    });
+  $(".fancybox-inner a[data-remote]").click(function() {
+    $.fancybox.showLoading();
   });
 </script>

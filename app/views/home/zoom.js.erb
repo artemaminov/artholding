@@ -2,9 +2,9 @@ $(".wrapper .inside-project-pager").replaceWith("<%= j render "shared/project_pa
 
 var image = $(".wrapper img");
 image.attr("src", "<%= j @project.main.url %>").load(function() {
+  $.fancybox.update();
   $.fancybox.hideLoading();
   image.show();
-  $.fancybox.update();
 });
 
 $(".fancybox-inner a[data-remote]").click(function() {
