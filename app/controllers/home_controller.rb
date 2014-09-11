@@ -27,7 +27,6 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.js {
         Order.complete(params[:order]).deliver
-        render status: :ok
       }
     end
   end

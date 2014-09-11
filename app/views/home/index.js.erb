@@ -1,55 +1,67 @@
 $(".project-modal").attr("id", <%= @project.id %>).html("<%= j render 'shared/project_modal' %>");
 
-if ($(".project-modal:hidden").length != 0) {
-  var prev_tabs_div_height = $("#tabs").css("min-height");
-}
-$("#tabs").css("min-height", "870px");
+$(function() {
+  var tabsBar = $("#tabs");
 
-$(".project-modal .icn-close").click(function(evn){
-  evn.preventDefault();
-  $(".project-modal").animate({ left: "-9999px"}, 800);
-  $(this).unbind("click");
-  $("#tabs").css("min-height", prev_tabs_div_height);
-  setTimeout(function() {
-    $("#tabs").css("min-height", "auto");
-  }, 500);
-});
+  $(".project-modal a[data-remote]").click(function() {
+    $(".loading-wrapper").show();
+  });
 
-$(".project-modal .fancybox").fancybox({
-  live: false,
-  padding: 0,
-  margin : 0,
-  fitToView: false,
-  maxWidth: "100%",
-  closeBtn: false,
-  type: "ajax",
-  afterClose: function() {
-    $.fancybox.hideLoading();
-  },
-  beforeShow: function() {
-    $('.fancybox-type-ajax').css('visibility', 'hidden');
-    $.fancybox.showLoading();
-  },
-  afterShow: function() {
-    $(".bar .icn-close").click(function() {
-      $.fancybox.close();
-    });
-    $(".fancybox-overlay").scroll(function() {
-      var fancyTop = $(window).scrollTop(),
-          imageTop = $(".wrapper img").offset().top - 74;
-      if (fancyTop > imageTop) {
-        $('.bar').addClass("stick");
-        $(".project-image").addClass("stick");
-      } else {
-        $('.bar').removeClass("stick");
-        $(".project-image").removeClass("stick");
-      }
-      console.log(fancyTop, imageTop);
-    });
+  $(".project-modal img").load(function() {
+    $(".loading-wrapper").hide();
+  });
+
+  if ($(".project-modal:hidden").length != 0) {
+    var prev_tabs_div_height = tabsBar.css("min-height");
   }
-});
+  tabsBar.css("min-height", "870px");
 
-$(".fancybox").on("mouseover", function(event) {
-  // Prevent .bar to recieve mouseover
-  event.preventDefault();
+  $(".project-modal .icn-close").click(function(evn){
+    evn.preventDefault();
+    $(".project-modal").animate({ left: "-9999px"}, 800);
+    $(this).unbind("click");
+    tabsBar.css("min-height", prev_tabs_div_height);
+    setTimeout(function() {
+      tabsBar.css("min-height", "auto");
+    }, 500);
+  });
+
+  $(".project-modal .fancybox").fancybox({
+    live: false,
+    padding: 0,
+    margin : 0,
+    fitToView: false,
+    maxWidth: "100%",
+    closeBtn: false,
+    type: "ajax",
+    afterClose: function() {
+      $.fancybox.hideLoading();
+    },
+    beforeShow: function() {
+      $('.fancybox-type-ajax').css('visibility', 'hidden');
+      $.fancybox.showLoading();
+    },
+    afterShow: function() {
+      $(".bar .icn-close").click(function() {
+        $.fancybox.close();
+      });
+      $(".fancybox-overlay").scroll(function() {
+        var fancyTop = $(window).scrollTop(),
+            imageTop = $(".wrapper img").offset().top - 74;
+        if (fancyTop > imageTop) {
+          $('.bar').addClass("stick");
+          $(".project-image").addClass("stick");
+        } else {
+          $('.bar').removeClass("stick");
+          $(".project-image").removeClass("stick");
+        }
+        console.log(fancyTop, imageTop);
+      });
+    }
+  });
+
+  $(".fancybox").on("mouseover", function(event) {
+    // Prevent .bar to recieve mouseover
+    event.preventDefault();
+  });
 });

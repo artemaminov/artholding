@@ -10,7 +10,7 @@ $ ->
 
   # Portfolio AJAX Project open
   $(".project a[data-remote]")
-    .on 'ajax:success', (e, data, status, xhr) ->
+    .on 'ajax:send', (e, data, status, xhr) ->
       $('.project-modal')
         .css("left", "9999px")
         .animate({ left: "0"}, 800)

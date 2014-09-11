@@ -73,6 +73,33 @@ footer {
   margin: -2px;
 }
 
+.loading-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+//  display: none;
+  background: image-url("fancybox_overlay.png");
+  .animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -22px;
+    background-position: 0 -108px;
+    opacity: 0.8;
+    width: 44px;
+    height: 44px;
+    background-image: image-url("fancybox_sprite.png");
+    div {
+      width: 44px;
+      height: 44px;
+      background: url(/assets/fancybox_loading.gif) center center no-repeat;
+    }
+  }
+}
+
 // UI
 header {
   height: 326px;
