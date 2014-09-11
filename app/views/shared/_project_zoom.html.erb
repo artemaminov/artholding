@@ -7,3 +7,18 @@
     <%= image_tag @project.main.url %>
   </div>
 </div>
+
+<script>
+  $(function() {
+    $(".wrapper img").load(function() {
+      setTimeout(function() {
+        $('.fancybox-type-ajax').css('visibility', 'visible');
+        $.fancybox.hideLoading();
+      }, 400)
+    });
+
+    $(".fancybox-inner a[data-remote]").click(function() {
+      $.fancybox.showLoading();
+    });
+  });
+</script>

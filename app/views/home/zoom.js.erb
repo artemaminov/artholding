@@ -1,6 +1,12 @@
-var image = $(".wrapper img");
-image.hide();
-image.attr("src", "<%= j @project.main.url %>").load(function() {
-  image.show();
-});
 $(".wrapper .inside-project-pager").replaceWith("<%= j render "shared/project_pager" %>");
+
+var image = $(".wrapper img");
+image.attr("src", "<%= j @project.main.url %>").load(function() {
+  $.fancybox.hideLoading();
+  image.show();
+  $.fancybox.update();
+});
+
+$(".fancybox-inner a[data-remote]").click(function() {
+  $.fancybox.showLoading();
+});
