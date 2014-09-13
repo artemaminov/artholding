@@ -66,18 +66,18 @@ $ ->
   $(".clients-carousel").carouFredSel
 #    circular: true
 #    infinite: true
-#    responsive: true
+    responsive: true
     align: "center"
-    height: 150
+#    height: 150
     width: 840
     items:
-      visible: "variable"
+      visible: 4
       width: 210
 #      height: 150
       minimum: 5
     scroll:
       items: 1
-#      queue : "last"
+      queue : "last"
     auto: false
     prev:
       button: -> $('.clients-pager .projects-pager-left')
