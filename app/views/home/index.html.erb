@@ -107,6 +107,9 @@
             <div class="row">
               <div class="cell">
                 <div class="cf">
+                  <span>
+                    <img src="<%= client.logo.url %>" alt=""/>
+                  </span>
                   <% unless client.site.blank? %>
                     <a href="http://<%= client.site %>" rel="nofollow" target="_blank">
                   <% else %>
@@ -114,9 +117,6 @@
                   <% end %>
                   <img src="<%= client.logo_grey.url %>" alt=""/>
                   </a>
-                  <span>
-                    <img src="<%= client.logo.url %>" alt=""/>
-                  </span>
                 </div>
               </div>
             </div>
