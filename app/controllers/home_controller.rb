@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html {
         @groups = Group.all
-        @projects = Project.all.order id: :desc
+        @projects = Project.all.order position: :asc
         @clients = Client.all
       }
       format.js {

@@ -15,19 +15,19 @@ ActiveAdmin.register Project do
   #  permitted
   # end
 
-  permit_params :title, :about, :finished_at, :preview, :carousel, :main, :group_id, :client_id, :is_in_carousel, :swf_width, :swf_height
+  permit_params :title, :about, :finished_at, :preview, :carousel, :main, :group_id, :client_id, :is_in_carousel, :swf_width, :swf_height, :position, :group_position
 
   index do
     column :title do |project|
       link_to project.title, edit_admin_project_path(project)
     end
-    column :finished_at
     column :group do |project|
       project.group.name
     end
-    column :client
+    column :position
+    column :group_position
     column :image do |project|
-      image_tag project.preview.url :small, width: "266px"
+      image_tag project.preview.url :small
     end
     actions
   end
@@ -50,6 +50,8 @@ ActiveAdmin.register Project do
       f.input :swf_height, input_html: { class: "swf-fields" }
     end
     f.inputs "Настройки" do
+      f.input :position
+      f.input :group_position
       f.input :is_in_carousel
     end
     f.actions

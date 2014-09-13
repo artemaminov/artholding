@@ -25,10 +25,10 @@ ru:
         logo: Логотип
         logo_grey: Логотип (серый)
       project:
-        group: Тип проекта
+        group: Тип
         title: Наименование
         about: О проекте
-        finished_at: Дата завершения работ по проекту
+        finished_at: Дата сдачи проекта
         client: Клиент
         preview: Предпросмотр
         carousel: Карусель
@@ -36,6 +36,9 @@ ru:
         is_in_carousel: Поместить проект в карусель
         swf_width: Ширина SWF
         swf_height: Высота SWF
+        position: Позиция (общий)
+        group_position: Позиция (группа)
+        image: Изображение
       group:
         name: Наименование
         sorting_position: Позиция по счету
