@@ -394,24 +394,24 @@ h1 {
         height: 150px;
         .cell {
           vertical-align: middle;
-        }
-      }
-      .cf {
-        position: relative;
-        a, span {
-          display: block;
-        }
-        span {
-          position: absolute;
-          top: 0;
-          left: 0;
-          -webkit-transition: opacity 0.3s;
-          -moz-transition: opacity 0.3s;
-          -ms-transition: opacity 0.3s;
-          -o-transition: opacity 0.3s;
-          transition: opacity 0.3s;
-          &:hover {
-            opacity: 0;
+          .cf {
+            position: relative;
+            a, span {
+              display: block;
+            }
+            a {
+              position: absolute;
+              top: 0;
+              left: 0;
+              -webkit-transition: opacity 0.3s;
+              -moz-transition: opacity 0.3s;
+              -ms-transition: opacity 0.3s;
+              -o-transition: opacity 0.3s;
+              transition: opacity 0.3s;
+              &:hover {
+                opacity: 0;
+              }
+            }
           }
         }
       }
