@@ -8,13 +8,13 @@ class HomeController < ApplicationController
         @clients = Client.all
       }
       format.js {
-        load_neighbours "project_path"
+        load_neighbours "project_path", false
       }
     end
   end
 
   def zoom
-    load_neighbours "project_zoom_path"
+    load_neighbours "project_zoom_path", true
     respond_to do |format|
       format.html {
         render partial: 'shared/project_zoom'
@@ -33,9 +33,9 @@ class HomeController < ApplicationController
 
   private
 
-  def load_neighbours path
+  def load_neighbours path, zoom
     @group = params[:group]
-    @project = Project.find_neighbours params[:id], @group
+    @project = Project.find_neighbours params[:id], @group, zoom
     if @project.prev_one.nil?
       @link_to_prev_project = false
     else
