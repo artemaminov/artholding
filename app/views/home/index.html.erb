@@ -94,7 +94,7 @@
   <div class="content">
     <h1>КЛИЕНТЫ</h1>
     <div class="carousel-box">
-      <span>Список клиентов</span>
+      <h2>Список клиентов</h2>
       <ul class="clients-pager">
         <li class="projects-pager-left" style="display: inline-block;"></li>
         <li class="projects-pager"></li>
@@ -103,15 +103,23 @@
       <div class="clients-carousel">
         <% @clients.each do |client| %>
         <div class="client">
-          <div class="cf">
-            <img src="<%= client.logo.url %>" alt=""/>
-            <% unless client.site.blank? %>
-            <a href="http://<%= client.site %>" rel="nofollow" target="_blank">
-            <% else %>
-            <a>
-            <% end %>
-              <img src="<%= client.logo_grey.url %>" alt=""/>
-            </a>
+          <div class="table">
+            <div class="row">
+              <div class="cell">
+                <div class="cf">
+                  <span>
+                    <img src="<%= client.logo.url %>" alt=""/>
+                  </span>
+                  <% unless client.site.blank? %>
+                    <a href="http://<%= client.site %>" rel="nofollow" target="_blank">
+                  <% else %>
+                    <a>
+                  <% end %>
+                  <img src="<%= client.logo_grey.url %>" alt=""/>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <% end %>

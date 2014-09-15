@@ -379,7 +379,7 @@ h1 {
     top: 4px;
     right: 0;
   }
-  span {
+  h2 {
     font: 14pt 'cgothic';
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -388,29 +388,33 @@ h1 {
   .clients-carousel {
     width: 840px;
     .client {
-      display: inline-block;
-      text-align: center;
-      .cf {
-        position: relative;
-        display: inline-block;
-        & > img {
-          position: relative;
-          -webkit-transition: opacity 0.3s;
-          -moz-transition: opacity 0.3s;
-          -ms-transition: opacity 0.3s;
-          -o-transition: opacity 0.3s;
-          transition: opacity 0.3s;
-          &:hover {
-            opacity: 0;
+      display: block;
+      float: left;
+      .table {
+        height: 150px;
+        .cell {
+          vertical-align: middle;
+          .cf {
+            position: relative;
+            margin: 0 20px;
+            a, span {
+              display: block;
+            }
+            a {
+              position: absolute;
+              top: 0;
+              left: 0;
+              -webkit-transition: opacity 0.3s;
+              -moz-transition: opacity 0.3s;
+              -ms-transition: opacity 0.3s;
+              -o-transition: opacity 0.3s;
+              transition: opacity 0.3s;
+              &:hover {
+                opacity: 0;
+              }
+            }
           }
         }
-        a {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-//        height: 175px;
-//        width: 266px;
       }
     }
   }

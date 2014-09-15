@@ -44,15 +44,15 @@ $ ->
 
   # Carousels
   $(".main-carousel").carouFredSel
-    circular: true,
-    infinite: true,
-    responsive: true,
-    height: 350,
-    width: '100%',
-    align: 'center',
+    circular: true
+    infinite: true
+    responsive: true
+    height: 350
+    width: '100%'
+    align: 'center'
     items:
-      visible: 1,
-      height: 350,
+      visible: 1
+      height: 350
       minimum: 2
     pagination:
       container: ".main-carousel-pager"
@@ -64,19 +64,21 @@ $ ->
     swipe: true
 
   $(".clients-carousel").carouFredSel
-    circular: false,
-    infinite: false,
-    responsive: true,
-    height: 150,
-#    width: 840,
+#    circular: true
+#    infinite: true
+    responsive: true
+    align: "center"
+#    height: 150
+    width: 840
     items:
-      visible: 4,
-      width: 280,
-      height: 175,
-      minimum: 3
+      visible: 4
+      width: 210
+#      height: 150
+      minimum: 5
     scroll:
       items: 1
-    auto: false,
+      queue : "last"
+    auto: false
     prev:
       button: -> $('.clients-pager .projects-pager-left')
     next:
@@ -88,15 +90,15 @@ $ ->
     $('#' + tab.attr('id'))
       .find('.carousel')
       .carouFredSel
-        circular: false,
-        infinite: false,
-        width: 840,
-        align: false,
+        circular: false
+        infinite: false
+        width: 840
+        align: false
         items:
-          visible: 1,
-          width: 840,
+          visible: 1
+          width: 840
           minimum: 1
-        auto: false,
+        auto: false
         prev:
           button: -> tab.find('.projects-pager-left')
         next:

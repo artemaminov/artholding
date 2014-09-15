@@ -22,7 +22,7 @@ ActiveAdmin.register Client do
     column :name
     column :site
     column :logo do |client|
-      image_tag client.logo.url :client_logo
+      image_tag client.logo.url
     end
     actions
   end
