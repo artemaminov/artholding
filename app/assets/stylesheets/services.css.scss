@@ -1,0 +1,64 @@
+.about article {
+  text-align: center;
+}
+.services {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  margin: 20px 0 40px 0;
+  p {
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      width: 16px;
+      height: 1px;
+      background-color: black;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 9px;
+    }
+  }
+  .ac {
+    display: inline-block;
+    ul {
+      text-align: left;
+      li {
+        font: 9pt 'ptsans';
+        &:before {
+          background: image-url('sprites.png') -235px -99px no-repeat;
+          display: inline-block;
+          width: 5px;
+          height: 8px;
+          content: "";
+          position: relative;
+          left: -4px;
+        }
+      }
+    }
+  }
+  .service-art {
+    background: image-url('sprites.png') 0px -370px no-repeat;
+    display: inline-block;
+    width: 109px;
+    height: 109px;
+  }
+  .service-flash {
+    background: image-url('sprites.png') -111px -370px no-repeat;
+    display: inline-block;
+    width: 109px;
+    height: 109px;
+  }
+  .service-tech {
+    background: image-url('sprites.png') -111px -259px no-repeat;
+    display: inline-block;
+    width: 109px;
+    height: 109px;
+  }
+  .service-web {
+    background: image-url('sprites.png') 0px -259px no-repeat;
+    display: inline-block;
+    width: 109px;
+    height: 109px;
+  }
+}
