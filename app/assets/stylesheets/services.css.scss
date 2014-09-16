@@ -3,16 +3,20 @@
 }
 .services {
   width: 100%;
-  table-layout: fixed;
+//  table-layout: fixed;
   text-align: center;
   margin: 20px 0 40px 0;
+  .cell.full {
+    width: 33%;
+  }
   p {
     text-transform: uppercase;
+    margin-top: 15px;
     &:after {
       content: "";
       width: 16px;
       height: 1px;
-      background-color: black;
+      background-color: #7A5217;
       display: block;
       margin: 0 auto;
       position: relative;
@@ -23,8 +27,11 @@
     display: inline-block;
     ul {
       text-align: left;
+      text-indent: -5px;
+      margin-left: 5px;
       li {
         font: 9pt 'ptsans';
+        color: #969696;
         &:before {
           background: image-url('sprites.png') -235px -99px no-repeat;
           display: inline-block;

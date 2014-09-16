@@ -13,7 +13,7 @@ $(function() {
             cursorMargin = 1;
 
         if (cursor == menuCursor1) {
-            cursorMargin = cursor.width() / 2 + 4;
+            cursorMargin = 4;
         }
 
         cursor.addClass('transition');
