@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+a:focus, input:focus {
+  outline: none;
+}
+
 p, input, textarea, .ui-selectmenu-button, .ui-menu-item {
   font: 11pt 'ptsans';
 }
