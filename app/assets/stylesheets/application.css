@@ -11,8 +11,14 @@
  * file per style scope.
  *
  *= require_directory ./reset
- *= require jquery.fancybox
  *= require_directory ./fonts
- *= require_tree .
+ *= require fancybox/jquery.fancybox
+ *= require modal
+ *= require selectmenu
+ *= require services
+ *= require sprites
+ *= require tabs
+ *= require zoom
  *= require home
+ *= require magicline
  */

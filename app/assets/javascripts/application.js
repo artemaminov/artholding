@@ -16,5 +16,8 @@
 //= require jquery-ui/tabs
 //= require jquery-ui/selectmenu
 //= require jquery-ui/dialog
-//= require jquery.fancybox
-//= require_tree .
+//= require fancybox/jquery.fancybox
+//= require carouFredSel-6.2.1/jquery.carouFredSel-6.2.1-packed
+//= require jquery.scrollTo.min
+//= require magicline
+//= require home
